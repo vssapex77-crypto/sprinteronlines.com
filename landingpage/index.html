@@ -5,13 +5,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Sprinter Online | 100% Bonus Offer</title>
+<title>Sprinter Online | 100% Bonus</title>
 
 <meta name="description"
-content="Explore the latest Sprinter Online offer, eligibility and applicable terms.">
+content="Explore the latest Sprinter Online 100% bonus offer and applicable terms.">
 
-<!-- ================= META PIXEL ================= -->
-
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {
@@ -49,19 +48,12 @@ alt=""
 >
 </noscript>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link
-href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800;900&display=swap"
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
 rel="stylesheet"
 >
 
 <style>
-
-/* =====================================================
-   RESET
-===================================================== */
 
 *{
 margin:0;
@@ -69,833 +61,341 @@ padding:0;
 box-sizing:border-box;
 }
 
-html{
-scroll-behavior:smooth;
+html,
+body{
+width:100%;
+min-height:100%;
 }
 
 body{
 font-family:Inter,sans-serif;
-background:#03040a;
+
+background:
+radial-gradient(
+circle at 15% 10%,
+rgba(0,229,255,.22),
+transparent 30%
+),
+radial-gradient(
+circle at 90% 20%,
+rgba(255,0,153,.20),
+transparent 32%
+),
+linear-gradient(
+145deg,
+#05050c,
+#090313,
+#03050b
+);
+
 color:#fff;
+
+display:flex;
+justify-content:center;
+
 overflow-x:hidden;
 }
 
 
-/* =====================================================
-   CYBER BACKGROUND
-===================================================== */
+/* ================================
+   BACKGROUND
+================================ */
 
-body::before{
-content:"";
+.bg{
 position:fixed;
 inset:0;
-z-index:-10;
 
-background:
-radial-gradient(
-circle at 15% 20%,
-rgba(0,229,255,.18),
-transparent 27%
-),
-radial-gradient(
-circle at 85% 25%,
-rgba(255,0,153,.18),
-transparent 28%
-),
-radial-gradient(
-circle at 50% 100%,
-rgba(108,0,255,.2),
-transparent 35%
-),
-#03040a;
+pointer-events:none;
+
+overflow:hidden;
 }
 
-.cyber-grid{
-position:fixed;
+.grid{
+position:absolute;
 inset:0;
-z-index:-8;
 
 background-image:
 linear-gradient(
-rgba(0,229,255,.045) 1px,
+rgba(255,255,255,.025) 1px,
 transparent 1px
 ),
 linear-gradient(
 90deg,
-rgba(0,229,255,.045) 1px,
+rgba(255,255,255,.025) 1px,
 transparent 1px
 );
 
-background-size:45px 45px;
+background-size:40px 40px;
 
-transform:perspective(500px)
-rotateX(60deg)
-scale(1.7);
-
-transform-origin:center bottom;
-
-opacity:.5;
-
-mask-image:linear-gradient(
+mask-image:
+linear-gradient(
 to bottom,
-transparent 5%,
-black 65%,
-transparent 100%
+black,
+transparent
 );
 }
 
-.scanlines{
-position:fixed;
-inset:0;
-z-index:20;
-pointer-events:none;
+.glow{
+position:absolute;
 
-background:
-repeating-linear-gradient(
-to bottom,
-transparent 0,
-transparent 3px,
-rgba(255,255,255,.012) 4px
-);
-}
-
-.noise{
-position:fixed;
-inset:0;
-z-index:19;
-pointer-events:none;
-opacity:.04;
-
-background-image:
-url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
-}
-
-
-/* =====================================================
-   GLOW ORBS
-===================================================== */
-
-.orb{
-position:fixed;
-border-radius:50%;
-filter:blur(90px);
-z-index:-7;
-pointer-events:none;
-}
-
-.orb1{
 width:280px;
 height:280px;
+
+border-radius:50%;
+
+filter:blur(90px);
+
+opacity:.35;
+}
+
+.glow.one{
 background:#00e5ff;
-left:-120px;
-top:18%;
-opacity:.22;
-animation:orb1 9s infinite alternate ease-in-out;
+left:-150px;
+top:15%;
 }
 
-.orb2{
-width:300px;
-height:300px;
-background:#ff008c;
-right:-130px;
+.glow.two{
+background:#ff0099;
+right:-150px;
 top:35%;
-opacity:.2;
-animation:orb2 11s infinite alternate ease-in-out;
 }
 
-.orb3{
-width:240px;
-height:240px;
-background:#7500ff;
-left:40%;
-bottom:-100px;
-opacity:.2;
-animation:orb3 12s infinite alternate ease-in-out;
-}
-
-@keyframes orb1{
-to{transform:translate(120px,100px)}
-}
-
-@keyframes orb2{
-to{transform:translate(-120px,100px)}
-}
-
-@keyframes orb3{
-to{transform:translate(100px,-100px)}
+.glow.three{
+background:#7200ff;
+left:30%;
+bottom:-180px;
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* ================================
+   MAIN
+================================ */
 
-header{
-height:78px;
+.page{
+width:100%;
+max-width:520px;
 
-display:flex;
-align-items:center;
-justify-content:space-between;
+min-height:100vh;
 
-padding:0 6%;
+padding:
+22px 18px 35px;
 
 position:relative;
-z-index:30;
+z-index:2;
+}
 
-background:rgba(3,4,10,.7);
 
-border-bottom:
-1px solid rgba(255,255,255,.08);
+/* ================================
+   TOP
+================================ */
 
-backdrop-filter:blur(18px);
+.top{
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+margin-bottom:18px;
 }
 
 .logo{
 width:145px;
-max-height:52px;
+max-height:55px;
+
 object-fit:contain;
 }
 
-.logo-link{
-display:flex;
-}
 
-.nav-status{
-display:flex;
-align-items:center;
-gap:9px;
+/* ================================
+   MAIN CARD
+================================ */
 
-font-size:10px;
-font-weight:800;
-
-letter-spacing:1.5px;
-color:#7ef8ff;
-
-margin-right:20px;
-}
-
-.status-dot{
-width:7px;
-height:7px;
-border-radius:50%;
-background:#00f0ff;
-
-box-shadow:
-0 0 10px #00f0ff;
-
-animation:pulse 1.5s infinite;
-}
-
-@keyframes pulse{
-50%{
-opacity:.35;
-transform:scale(.7);
-}
-}
-
-.header-right{
-display:flex;
-align-items:center;
-gap:25px;
-}
-
-.header-btn{
-padding:11px 20px;
-
-border:1px solid rgba(0,229,255,.4);
-border-radius:8px;
-
-text-decoration:none;
-
-font-size:11px;
-font-weight:900;
-
-color:#fff;
-
-background:
-rgba(0,229,255,.08);
-
-box-shadow:
-inset 0 0 15px rgba(0,229,255,.06);
-
-transition:.3s;
-}
-
-.header-btn:hover{
-background:#00e5ff;
-color:#03040a;
-box-shadow:
-0 0 25px rgba(0,229,255,.45);
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero{
-min-height:720px;
-
-padding:90px 6% 80px;
-
-display:grid;
-
-grid-template-columns:
-1.05fr
-.95fr;
-
-align-items:center;
-
-gap:60px;
-
-position:relative;
-}
-
-.hero-left{
-position:relative;
-z-index:2;
-}
-
-.small-label{
-display:inline-flex;
-
-align-items:center;
-gap:10px;
-
-padding:9px 14px;
-
-border:1px solid rgba(0,229,255,.3);
-
-background:
-rgba(0,229,255,.06);
-
-font-family:Orbitron,sans-serif;
-
-font-size:10px;
-
-letter-spacing:2px;
-
-color:#7ef8ff;
-
-margin-bottom:25px;
-
-clip-path:
-polygon(
-0 0,
-94% 0,
-100% 35%,
-100% 100%,
-6% 100%,
-0 65%
-);
-}
-
-.hero h1{
-font-family:Orbitron,sans-serif;
-
-font-size:
-clamp(50px,7vw,92px);
-
-line-height:.92;
-
-letter-spacing:-4px;
-
-font-weight:900;
-
-margin-bottom:30px;
-}
-
-.hero h1 span{
-display:block;
-}
-
-.gradient{
-background:
-linear-gradient(
-90deg,
-#00e5ff,
-#fff,
-#ff31b7,
-#7b4dff
-);
-
-background-size:300%;
-
--webkit-background-clip:text;
-background-clip:text;
-
-color:transparent;
-
-animation:gradient 5s linear infinite;
-}
-
-@keyframes gradient{
-to{
-background-position:300%;
-}
-}
-
-.hero-text{
-max-width:590px;
-
-color:#989bad;
-
-font-size:16px;
-
-line-height:1.8;
-
-margin-bottom:35px;
-}
-
-.hero-actions{
-display:flex;
-gap:14px;
-flex-wrap:wrap;
-}
-
-.btn{
-display:inline-flex;
-
-align-items:center;
-justify-content:center;
-gap:12px;
-
-padding:16px 25px;
-
-text-decoration:none;
-
-font-size:12px;
-font-weight:900;
-
-letter-spacing:.5px;
-
-border-radius:8px;
-
-transition:.3s;
+.card{
 
 position:relative;
 
 overflow:hidden;
-}
 
-.btn-primary{
-background:
-linear-gradient(
-100deg,
-#00e5ff,
-#4df4ff
-);
+border-radius:30px;
 
-color:#02040a;
-
-box-shadow:
-0 0 30px rgba(0,229,255,.25);
-}
-
-.btn-primary:hover{
-transform:translateY(-3px);
-
-box-shadow:
-0 0 45px rgba(0,229,255,.5);
-}
-
-.btn-secondary{
-border:
-1px solid rgba(255,255,255,.15);
-
-color:#fff;
-
-background:
-rgba(255,255,255,.04);
-}
-
-.btn-secondary:hover{
-border-color:#ff0099;
-
-background:
-rgba(255,0,153,.08);
-transform:translateY(-3px);
-}
-
-
-/* =====================================================
-   GAMING HUD VISUAL
-===================================================== */
-
-.hero-right{
-position:relative;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-min-height:500px;
-}
-
-.hud{
-width:min(470px,100%);
-height:470px;
-
-position:relative;
-
-border:
-1px solid rgba(0,229,255,.25);
+padding:
+30px 22px 25px;
 
 background:
 linear-gradient(
 145deg,
-rgba(0,229,255,.06),
-rgba(117,0,255,.08),
-rgba(255,0,153,.06)
+rgba(255,255,255,.09),
+rgba(255,255,255,.035)
 );
 
-backdrop-filter:blur(20px);
+border:
+1px solid rgba(255,255,255,.13);
 
 box-shadow:
-0 0 80px rgba(0,0,0,.5),
-inset 0 0 60px rgba(0,229,255,.03);
+0 30px 90px rgba(0,0,0,.55),
+inset 0 1px 0 rgba(255,255,255,.08);
 
-clip-path:
-polygon(
-0 4%,
-4% 0,
-96% 0,
-100% 4%,
-100% 96%,
-96% 100%,
-4% 100%,
-0 96%
-);
+backdrop-filter:blur(20px);
 }
 
-.hud::before{
+
+/* neon border */
+
+.card::before{
+
 content:"";
 
 position:absolute;
-inset:15px;
 
-border:
-1px solid rgba(255,255,255,.06);
+inset:-2px;
 
-clip-path:
-inherit;
+border-radius:32px;
+
+padding:2px;
+
+background:
+linear-gradient(
+135deg,
+#00e5ff,
+transparent 35%,
+transparent 65%,
+#ff0099
+);
+
+-webkit-mask:
+linear-gradient(#fff 0 0) content-box,
+linear-gradient(#fff 0 0);
+
+-webkit-mask-composite:xor;
+
+mask-composite:exclude;
+
+opacity:.55;
+
+pointer-events:none;
 }
 
-.hud-top{
+
+/* card glow */
+
+.card::after{
+
+content:"";
+
 position:absolute;
 
-top:25px;
-left:30px;
-right:30px;
-
-display:flex;
-justify-content:space-between;
-
-font-family:Orbitron,sans-serif;
-
-font-size:8px;
-
-letter-spacing:2px;
-
-color:#687184;
-}
-
-.hud-title{
-position:absolute;
-
-top:70px;
-left:0;
-right:0;
-
-text-align:center;
-
-font-family:Orbitron,sans-serif;
-
-font-size:11px;
-
-letter-spacing:4px;
-
-color:#7ef8ff;
-}
-
-.hud-core{
-position:absolute;
-
-left:50%;
-top:50%;
-
-transform:translate(-50%,-50%);
-
-width:260px;
-height:260px;
+width:250px;
+height:250px;
 
 border-radius:50%;
 
-display:flex;
+background:#00e5ff;
+
+filter:blur(100px);
+
+opacity:.13;
+
+top:-130px;
+left:-100px;
+
+pointer-events:none;
+}
+
+
+/* ================================
+   BADGE
+================================ */
+
+.badge{
+
+position:relative;
+z-index:2;
+
+display:inline-flex;
+
 align-items:center;
-justify-content:center;
+gap:7px;
+
+padding:7px 13px;
+
+border-radius:30px;
 
 background:
-radial-gradient(
-circle,
-rgba(0,229,255,.16),
-rgba(123,0,255,.08) 50%,
-transparent 70%
-);
+rgba(0,229,255,.08);
 
 border:
 1px solid rgba(0,229,255,.25);
 
-box-shadow:
-0 0 60px rgba(0,229,255,.15);
+font-size:9px;
+
+font-weight:800;
+
+letter-spacing:1.5px;
+
+color:#75f5ff;
+
+margin-bottom:22px;
 }
 
-.hud-core::before,
-.hud-core::after{
-content:"";
+.badge-dot{
 
-position:absolute;
+width:6px;
+height:6px;
 
 border-radius:50%;
 
-border:1px solid rgba(0,229,255,.3);
-}
-
-.hud-core::before{
-width:210px;
-height:210px;
-
-border-top-color:#00e5ff;
-
-animation:spin 7s linear infinite;
-}
-
-.hud-core::after{
-width:175px;
-height:175px;
-
-border-right-color:#ff0099;
-
-animation:spin 5s linear infinite reverse;
-}
-
-@keyframes spin{
-to{
-transform:rotate(360deg);
-}
-}
-
-.bonus-core{
-position:relative;
-z-index:3;
-
-text-align:center;
-}
-
-.bonus-core small{
-display:block;
-
-font-family:Orbitron,sans-serif;
-
-font-size:9px;
-
-letter-spacing:3px;
-
-color:#b8bdca;
-
-margin-bottom:5px;
-}
-
-.bonus-core strong{
-display:block;
-
-font-family:Orbitron,sans-serif;
-
-font-size:65px;
-
-line-height:1;
-
-font-weight:900;
-
-background:
-linear-gradient(
-135deg,
-#00e5ff,
-#fff,
-#ff36bb
-);
-
--webkit-background-clip:text;
-background-clip:text;
-
-color:transparent;
-
-text-shadow:
-0 0 35px rgba(0,229,255,.2);
-}
-
-.hud-corner{
-position:absolute;
-
-font-family:Orbitron,sans-serif;
-
-font-size:8px;
-
-letter-spacing:1px;
-
-color:#606779;
-}
-
-.c1{
-left:30px;
-bottom:30px;
-}
-
-.c2{
-right:30px;
-bottom:30px;
-}
-
-.c3{
-left:30px;
-top:110px;
-}
-
-.c4{
-right:30px;
-top:110px;
-}
-
-.corner-line{
-position:absolute;
-
-width:45px;
-height:1px;
-
 background:#00e5ff;
-
-opacity:.6;
-}
-
-.c1 .corner-line,
-.c3 .corner-line{
-left:0;
-bottom:-7px;
-}
-
-.c2 .corner-line,
-.c4 .corner-line{
-right:0;
-bottom:-7px;
-background:#ff0099;
-}
-
-
-/* =====================================================
-   BONUS SECTION
-===================================================== */
-
-.bonus-section{
-padding:20px 6% 100px;
-}
-
-.section-frame{
-max-width:1050px;
-
-margin:auto;
-
-position:relative;
-
-padding:60px 40px;
-
-border:
-1px solid rgba(255,255,255,.1);
-
-background:
-linear-gradient(
-135deg,
-rgba(0,229,255,.055),
-rgba(122,0,255,.08),
-rgba(255,0,153,.055)
-);
-
-overflow:hidden;
-
-text-align:center;
 
 box-shadow:
-0 30px 100px rgba(0,0,0,.45);
+0 0 10px #00e5ff;
 }
 
-.section-frame::before{
-content:"";
 
-position:absolute;
+/* ================================
+   BONUS
+================================ */
 
-width:300px;
-height:300px;
+.bonus-label{
 
-background:#00e5ff;
-
-filter:blur(120px);
-
-opacity:.12;
-
-left:-120px;
-top:-150px;
-}
-
-.section-frame::after{
-content:"";
-
-position:absolute;
-
-width:300px;
-height:300px;
-
-background:#ff0099;
-
-filter:blur(120px);
-
-opacity:.12;
-
-right:-120px;
-bottom:-150px;
-}
-
-.frame-label{
-font-family:Orbitron,sans-serif;
-
-font-size:10px;
-
-letter-spacing:3px;
-
-color:#00e5ff;
-
-margin-bottom:15px;
-}
-
-.big-bonus{
 position:relative;
 z-index:2;
 
-font-family:Orbitron,sans-serif;
+font-size:11px;
+
+font-weight:700;
+
+letter-spacing:3px;
+
+color:#9297a8;
+
+text-align:center;
+
+margin-bottom:3px;
+}
+
+
+.bonus{
+
+position:relative;
+z-index:2;
+
+text-align:center;
 
 font-size:
-clamp(85px,15vw,170px);
-
-line-height:.9;
+clamp(90px,25vw,135px);
 
 font-weight:900;
 
-letter-spacing:-10px;
+line-height:.88;
+
+letter-spacing:-8px;
 
 background:
 linear-gradient(
-90deg,
-#00e5ff,
-#ffffff,
-#ff159d
+135deg,
+#00e5ff 5%,
+#ffffff 45%,
+#ff159d 90%
 );
 
 -webkit-background-clip:text;
@@ -905,471 +405,437 @@ color:transparent;
 
 filter:
 drop-shadow(
-0 0 30px
-rgba(0,229,255,.15)
+0 0 28px
+rgba(0,229,255,.20)
 );
+
+animation:float 4s ease-in-out infinite;
 }
 
-.offer-title{
-font-family:Orbitron,sans-serif;
+@keyframes float{
+
+0%,100%{
+transform:translateY(0);
+}
+
+50%{
+transform:translateY(-5px);
+}
+
+}
+
+
+.bonus-title{
+
+position:relative;
+z-index:2;
+
+text-align:center;
 
 font-size:
-clamp(24px,4vw,42px);
+clamp(23px,7vw,34px);
+
+font-weight:900;
 
 letter-spacing:3px;
 
-margin-top:12px;
-
-position:relative;
-z-index:2;
+margin-top:15px;
 }
 
-.offer-description{
-max-width:620px;
 
-margin:20px auto 30px;
+/* ================================
+   DIVIDER
+================================ */
 
-font-size:14px;
-
-line-height:1.8;
-
-color:#9599aa;
+.divider{
 
 position:relative;
 z-index:2;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+margin:25px 0;
 }
 
-.offer-btn{
+.divider span{
+
+height:1px;
+
+flex:1;
+
+background:
+rgba(255,255,255,.10);
+}
+
+.divider b{
+
+font-size:9px;
+
+letter-spacing:2px;
+
+color:#6e7382;
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.description{
+
 position:relative;
 z-index:2;
 
-display:inline-flex;
+text-align:center;
+
+font-size:13px;
+
+line-height:1.7;
+
+color:#9ca0b0;
+
+margin-bottom:22px;
+}
+
+
+/* ================================
+   INFO BOX
+================================ */
+
+.info{
+
+position:relative;
+z-index:2;
+
+padding:15px;
+
+border-radius:16px;
+
+background:
+rgba(255,255,255,.035);
+
+border:
+1px solid rgba(255,255,255,.07);
+
+margin-bottom:18px;
+}
+
+.info-row{
+
+display:flex;
+
+align-items:center;
+
+gap:12px;
+}
+
+.info-icon{
+
+width:35px;
+height:35px;
+
+border-radius:10px;
+
+display:flex;
 
 align-items:center;
 justify-content:center;
 
-gap:12px;
-
-padding:16px 30px;
-
 background:
 linear-gradient(
-100deg,
-#ff0099,
-#7b00ff
+135deg,
+rgba(0,229,255,.14),
+rgba(255,0,153,.14)
 );
 
-border-radius:8px;
+font-size:16px;
+}
 
-text-decoration:none;
+.info-text{
+
+font-size:11px;
+
+line-height:1.5;
+
+color:#888d9e;
+}
+
+.info-text strong{
+
+display:block;
 
 color:#fff;
 
 font-size:12px;
 
+margin-bottom:2px;
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.cta{
+
+position:relative;
+z-index:2;
+
+display:flex;
+
+align-items:center;
+justify-content:center;
+
+width:100%;
+
+height:56px;
+
+border-radius:15px;
+
+text-decoration:none;
+
+font-size:13px;
+
 font-weight:900;
 
-letter-spacing:1px;
+letter-spacing:.7px;
+
+color:#05050b;
+
+background:
+linear-gradient(
+100deg,
+#00e5ff,
+#66f5ff
+);
 
 box-shadow:
-0 0 35px rgba(255,0,153,.2);
+0 0 30px rgba(0,229,255,.22);
+
+transition:.3s;
+
+overflow:hidden;
+}
+
+.cta::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:60%;
+height:100%;
+
+background:
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.5),
+transparent
+);
+
+transform:skewX(-20deg);
+
+animation:shine 3.5s infinite;
+}
+
+@keyframes shine{
+
+0%{
+left:-100%;
+}
+
+45%,100%{
+left:140%;
+}
+
+}
+
+.cta span{
+
+position:relative;
+z-index:2;
+}
+
+.cta:hover{
+
+transform:translateY(-3px);
+
+box-shadow:
+0 0 45px rgba(0,229,255,.4);
+}
+
+
+/* ================================
+   SECOND BUTTON
+================================ */
+
+.telegram{
+
+position:relative;
+z-index:2;
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+height:48px;
+
+margin-top:10px;
+
+border-radius:13px;
+
+border:
+1px solid rgba(255,255,255,.10);
+
+background:
+rgba(255,255,255,.035);
+
+color:#fff;
+
+text-decoration:none;
+
+font-size:11px;
+
+font-weight:800;
 
 transition:.3s;
 }
 
-.offer-btn:hover{
-transform:translateY(-3px);
+.telegram:hover{
 
-box-shadow:
-0 0 50px rgba(255,0,153,.4);
+background:
+rgba(255,0,153,.08);
+
+border-color:
+rgba(255,0,153,.3);
 }
 
+
+/* ================================
+   TERMS
+================================ */
+
 .terms{
+
 position:relative;
 z-index:2;
 
-margin-top:17px;
+text-align:center;
 
-font-size:10px;
+font-size:9px;
 
-color:#5f6372;
+line-height:1.6;
+
+color:#555968;
+
+margin-top:18px;
 }
 
 
-/* =====================================================
-   FEATURE SECTION
-===================================================== */
+/* ================================
+   MINI FEATURES
+================================ */
 
 .features{
-padding:20px 6% 100px;
-}
-
-.section-header{
-max-width:700px;
-
-margin:0 auto 45px;
-
-text-align:center;
-}
-
-.section-header small{
-font-family:Orbitron,sans-serif;
-
-font-size:10px;
-
-letter-spacing:3px;
-
-color:#ff31b7;
-}
-
-.section-header h2{
-font-family:Orbitron,sans-serif;
-
-font-size:
-clamp(30px,5vw,50px);
-
-margin:12px 0;
-
-letter-spacing:-2px;
-}
-
-.section-header p{
-font-size:14px;
-
-line-height:1.7;
-
-color:#858999;
-}
-
-.cards{
-max-width:1100px;
-
-margin:auto;
 
 display:grid;
 
 grid-template-columns:
 repeat(3,1fr);
 
-gap:18px;
+gap:8px;
+
+margin-top:12px;
 }
 
-.card{
-position:relative;
+.feature{
 
-padding:32px;
+padding:13px 5px;
 
-min-height:220px;
+text-align:center;
 
-border:
-1px solid rgba(255,255,255,.08);
+border-radius:14px;
 
 background:
 rgba(255,255,255,.025);
 
-overflow:hidden;
-
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-8px);
-
-border-color:
-rgba(0,229,255,.3);
-
-box-shadow:
-0 25px 70px rgba(0,0,0,.35);
-}
-
-.card-number{
-font-family:Orbitron,sans-serif;
-
-font-size:10px;
-
-color:#4d5565;
-
-letter-spacing:2px;
-
-margin-bottom:25px;
-}
-
-.card-icon{
-font-size:30px;
-
-margin-bottom:18px;
-
-filter:
-drop-shadow(
-0 0 10px
-rgba(0,229,255,.5)
-);
-}
-
-.card h3{
-font-family:Orbitron,sans-serif;
-
-font-size:17px;
-
-margin-bottom:10px;
-}
-
-.card p{
-font-size:13px;
-
-line-height:1.7;
-
-color:#7f8393;
-}
-
-.card-line{
-position:absolute;
-
-height:2px;
-
-width:0;
-
-bottom:0;
-left:0;
-
-background:
-linear-gradient(
-90deg,
-#00e5ff,
-#ff0099
-);
-
-transition:.5s;
-}
-
-.card:hover .card-line{
-width:100%;
-}
-
-
-/* =====================================================
-   FINAL CTA
-===================================================== */
-
-.final{
-padding:20px 6% 100px;
-}
-
-.final-box{
-max-width:1000px;
-
-margin:auto;
-
-padding:65px 30px;
-
-text-align:center;
-
 border:
-1px solid rgba(0,229,255,.12);
-
-background:
-linear-gradient(
-135deg,
-rgba(0,229,255,.05),
-rgba(255,0,153,.05)
-);
+1px solid rgba(255,255,255,.06);
 }
 
-.final-box h2{
-font-family:Orbitron,sans-serif;
+.feature-icon{
 
-font-size:
-clamp(28px,5vw,52px);
+font-size:16px;
 
-margin-bottom:15px;
+margin-bottom:6px;
 }
 
-.final-box p{
-max-width:600px;
+.feature p{
 
-margin:0 auto 28px;
+font-size:8px;
 
-font-size:14px;
-
-line-height:1.7;
-
-color:#858999;
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer{
-padding:25px 6%;
-
-border-top:
-1px solid rgba(255,255,255,.07);
-
-display:flex;
-
-justify-content:space-between;
-
-align-items:center;
-
-font-size:10px;
+font-weight:700;
 
 letter-spacing:.5px;
 
-color:#5f6371;
-}
-
-.footer-brand{
-color:#fff;
-
-font-weight:800;
+color:#707585;
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* ================================
+   FOOTER
+================================ */
 
-@media(max-width:850px){
-
-header{
-padding:0 5%;
-}
-
-.nav-status{
-display:none;
-}
-
-.hero{
-grid-template-columns:1fr;
+.footer{
 
 text-align:center;
 
-padding:
-70px 5%
-60px;
-
-gap:40px;
-}
-
-.hero-text{
-margin-left:auto;
-margin-right:auto;
-}
-
-.hero-actions{
-justify-content:center;
-}
-
-.hero-right{
-min-height:400px;
-}
-
-.hud{
-width:390px;
-height:390px;
-}
-
-.cards{
-grid-template-columns:1fr;
-}
-
-.bonus-section,
-.features,
-.final{
-padding-left:5%;
-padding-right:5%;
-}
-
-}
-
-
-@media(max-width:500px){
-
-.logo{
-width:120px;
-}
-
-.header-btn{
-padding:9px 13px;
-
 font-size:9px;
+
+color:#555968;
+
+margin-top:22px;
 }
 
-.hero{
-padding-top:55px;
+.footer strong{
+
+color:#fff;
 }
 
-.hero h1{
-font-size:51px;
 
-letter-spacing:-3px;
-}
+/* ================================
+   MOBILE
+================================ */
 
-.hero-text{
-font-size:14px;
-}
+@media(max-width:380px){
 
-.hero-actions{
-flex-direction:column;
-}
-
-.btn{
-width:100%;
-}
-
-.hud{
-width:320px;
-height:320px;
-}
-
-.hud-core{
-width:205px;
-height:205px;
-}
-
-.hud-core::before{
-width:165px;
-height:165px;
-}
-
-.hud-core::after{
-width:135px;
-height:135px;
-}
-
-.bonus-core strong{
-font-size:50px;
-}
-
-.section-frame{
+.page{
 padding:
-50px 20px;
+16px 12px 25px;
 }
 
-.big-bonus{
-font-size:88px;
+.card{
+padding:
+25px 17px 22px;
+}
+
+.bonus{
+font-size:82px;
 
 letter-spacing:-6px;
 }
 
-.offer-title{
-font-size:23px;
-
-letter-spacing:1px;
-}
-
-.offer-btn{
-width:100%;
-}
-
-footer{
-flex-direction:column;
-
-text-align:center;
-
-gap:10px;
+.bonus-title{
+font-size:21px;
 }
 
 }
@@ -1380,23 +846,27 @@ gap:10px;
 
 <body>
 
-<div class="cyber-grid"></div>
-<div class="scanlines"></div>
-<div class="noise"></div>
+<div class="bg">
 
-<div class="orb orb1"></div>
-<div class="orb orb2"></div>
-<div class="orb orb3"></div>
+<div class="grid"></div>
+
+<div class="glow one"></div>
+<div class="glow two"></div>
+<div class="glow three"></div>
+
+</div>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
+<div class="page">
 
-<header>
+
+<!-- ================================
+     LOGO
+================================ -->
+
+<div class="top">
 
 <a
-class="logo-link"
 href="https://t.me/sprinteronlineid"
 target="_blank"
 rel="noopener noreferrer"
@@ -1411,374 +881,195 @@ class="logo"
 
 </a>
 
-
-<div class="header-right">
-
-<div class="nav-status">
-<span class="status-dot"></span>
-ONLINE
-</div>
-
-<a
-class="header-btn"
-href="https://t.me/sprinteronlineid"
-target="_blank"
-rel="noopener noreferrer"
-onclick="trackTelegramClick()"
->
-CHECK OFFER
-</a>
-
-</div>
-
-</header>
-
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
-
-<section class="hero">
-
-<div class="hero-left">
-
-<div class="small-label">
-✦ SPRINTER ONLINE
-</div>
-
-<h1>
-
-<span>
-PLAY
-</span>
-
-<span class="gradient">
-DIFFERENT.
-</span>
-
-</h1>
-
-<p class="hero-text">
-Discover a bold digital experience with a
-futuristic interface, current offers and the
-latest information available through the
-official channel.
-</p>
-
-
-<div class="hero-actions">
-
-<a
-class="btn btn-primary"
-href="https://t.me/sprinteronlineid"
-target="_blank"
-rel="noopener noreferrer"
-onclick="trackTelegramClick()"
->
-CHECK LATEST OFFER
-<span>→</span>
-</a>
-
-
-<a
-class="btn btn-secondary"
-href="#bonus"
->
-VIEW 100% OFFER
-</a>
-
-</div>
-
 </div>
 
 
 
-<!-- =====================================================
-     HUD
-===================================================== -->
+<!-- ================================
+     MAIN OFFER
+================================ -->
 
-<div class="hero-right">
-
-<div class="hud">
-
-<div class="hud-top">
-<span>SPRINTER // SYSTEM</span>
-<span>ONLINE</span>
-</div>
-
-<div class="hud-title">
-FEATURED OFFER
-</div>
+<div class="card">
 
 
-<div class="hud-core">
+<div class="badge">
 
-<div class="bonus-core">
+<span class="badge-dot"></span>
 
-<small>
 LIMITED OFFER
-</small>
 
-<strong>
+</div>
+
+
+<div class="bonus-label">
+SPECIAL OFFER
+</div>
+
+
+<div class="bonus">
 100%
-</strong>
+</div>
 
-<small>
+
+<div class="bonus-title">
 BONUS
-</small>
-
-</div>
-
 </div>
 
 
-<div class="hud-corner c1">
-SYSTEM 01
-<div class="corner-line"></div>
-</div>
+<div class="divider">
 
-<div class="hud-corner c2">
-ACTIVE
-<div class="corner-line"></div>
-</div>
+<span></span>
 
-<div class="hud-corner c3">
-SPRINTER
-<div class="corner-line"></div>
-</div>
+<b>SPRINTER ONLINE</b>
 
-<div class="hud-corner c4">
-2026
-<div class="corner-line"></div>
-</div>
+<span></span>
 
 </div>
 
-</div>
 
-</section>
+<p class="description">
 
+Explore the latest Sprinter Online offer
+and check the applicable eligibility and
+terms through the official channel.
 
-
-<!-- =====================================================
-     BONUS
-===================================================== -->
-
-<section
-class="bonus-section"
-id="bonus"
->
-
-<div class="section-frame">
-
-<div class="frame-label">
-✦ FEATURED OFFER
-</div>
-
-<div class="big-bonus">
-100%
-</div>
-
-<div class="offer-title">
-BONUS OFFER
-</div>
-
-<p class="offer-description">
-Check the latest Sprinter Online offer,
-eligibility and applicable terms through
-the official channel.
 </p>
 
-<a
-class="offer-btn"
-href="https://t.me/sprinteronlineid"
-target="_blank"
-rel="noopener noreferrer"
-onclick="trackTelegramClick()"
->
-CHECK OFFER
-<span>→</span>
-</a>
 
-<div class="terms">
-Terms and eligibility apply.
-</div>
+<!-- INFO -->
 
-</div>
+<div class="info">
 
-</section>
+<div class="info-row">
 
-
-
-<!-- =====================================================
-     FEATURES
-===================================================== -->
-
-<section class="features">
-
-<div class="section-header">
-
-<small>
-SYSTEM FEATURES
-</small>
-
-<h2>
-BUILT DIFFERENT.
-</h2>
-
-<p>
-A futuristic interface combining neon
-visuals, modern layouts and a responsive
-digital experience.
-</p>
-
-</div>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<div class="card-number">
-01 // EXPERIENCE
-</div>
-
-<div class="card-icon">
-⚡
-</div>
-
-<h3>
-FAST EXPERIENCE
-</h3>
-
-<p>
-Responsive layouts designed to look sharp
-across desktop, tablet and mobile screens.
-</p>
-
-<div class="card-line"></div>
-
-</div>
-
-
-
-<div class="card">
-
-<div class="card-number">
-02 // DESIGN
-</div>
-
-<div class="card-icon">
-◈
-</div>
-
-<h3>
-NEON INTERFACE
-</h3>
-
-<p>
-A futuristic visual system with glowing
-elements, glass panels and cyber-inspired
-details.
-</p>
-
-<div class="card-line"></div>
-
-</div>
-
-
-
-<div class="card">
-
-<div class="card-number">
-03 // CONNECT
-</div>
-
-<div class="card-icon">
+<div class="info-icon">
 ✦
 </div>
 
-<h3>
-STAY CONNECTED
-</h3>
+<div class="info-text">
 
-<p>
-Check the official channel for the latest
-information, updates and applicable offers.
-</p>
+<strong>
+Latest Offer
+</strong>
 
-<div class="card-line"></div>
+Check the official channel for
+current offer information.
+
+</div>
+
+</div>
 
 </div>
 
 
-</div>
-
-</section>
-
-
-
-<!-- =====================================================
-     FINAL CTA
-===================================================== -->
-
-<section class="final">
-
-<div class="final-box">
-
-<h2>
-READY TO EXPLORE?
-</h2>
-
-<p>
-Visit the official channel and check the
-latest Sprinter Online information and
-current offer details.
-</p>
+<!-- PRIMARY CTA -->
 
 <a
-class="btn btn-primary"
+class="cta"
 href="https://t.me/sprinteronlineid"
 target="_blank"
 rel="noopener noreferrer"
 onclick="trackTelegramClick()"
 >
-CHECK LATEST OFFER
-<span>→</span>
+
+<span>
+CHECK 100% BONUS OFFER →
+</span>
+
 </a>
 
-</div>
 
-</section>
+<!-- SECOND CTA -->
+
+<a
+class="telegram"
+href="https://t.me/sprinteronlineid"
+target="_blank"
+rel="noopener noreferrer"
+onclick="trackTelegramClick()"
+>
+
+VIEW OFFICIAL CHANNEL
+
+</a>
 
 
+<div class="terms">
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
-<footer>
-
-<div>
-© 2026
-<span class="footer-brand">
-Sprinter Online
-</span>
-</div>
-
-<div>
 Terms and eligibility apply.
+Offer availability may vary.
+
 </div>
 
-</footer>
+</div>
 
 
 
-<!-- =====================================================
-     TELEGRAM TRACKING
-===================================================== -->
+<!-- ================================
+     FEATURES
+================================ -->
+
+<div class="features">
+
+<div class="feature">
+
+<div class="feature-icon">
+⚡
+</div>
+
+<p>
+FAST
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+✦
+</div>
+
+<p>
+MODERN
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+◈
+</div>
+
+<p>
+CONNECTED
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="footer">
+
+© 2026
+<strong>Sprinter Online</strong>
+<br>
+Official information & offers
+
+</div>
+
+
+</div>
+
+
+
+<!-- ================================
+     TRACKING
+================================ -->
 
 <script>
 
