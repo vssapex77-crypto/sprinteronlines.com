@@ -1,1487 +1,1802 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Sprinter Online | 100% Bonus Offer</title>
+
+<meta name="description"
+content="Explore the latest Sprinter Online offer, eligibility and applicable terms.">
+
+<!-- ================= META PIXEL ================= -->
+
+<script>
+!function(f,b,e,v,n,t,s)
+{
+if(f.fbq)return;
+n=f.fbq=function()
+{
+n.callMethod ?
+n.callMethod.apply(n,arguments) :
+n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}
+(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','1732688021370064');
+fbq('track','PageView');
+</script>
+
+<noscript>
+<img
+height="1"
+width="1"
+style="display:none"
+src="https://www.facebook.com/tr?id=1732688021370064&ev=PageView&noscript=1"
+alt=""
+>
+</noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link
+href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Orbitron:wght@500;600;700;800;900&display=swap"
+rel="stylesheet"
+>
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:Inter,sans-serif;
+background:#03040a;
+color:#fff;
+overflow-x:hidden;
+}
+
+
+/* =====================================================
+   CYBER BACKGROUND
+===================================================== */
+
+body::before{
+content:"";
+position:fixed;
+inset:0;
+z-index:-10;
+
+background:
+radial-gradient(
+circle at 15% 20%,
+rgba(0,229,255,.18),
+transparent 27%
+),
+radial-gradient(
+circle at 85% 25%,
+rgba(255,0,153,.18),
+transparent 28%
+),
+radial-gradient(
+circle at 50% 100%,
+rgba(108,0,255,.2),
+transparent 35%
+),
+#03040a;
+}
+
+.cyber-grid{
+position:fixed;
+inset:0;
+z-index:-8;
+
+background-image:
+linear-gradient(
+rgba(0,229,255,.045) 1px,
+transparent 1px
+),
+linear-gradient(
+90deg,
+rgba(0,229,255,.045) 1px,
+transparent 1px
+);
+
+background-size:45px 45px;
+
+transform:perspective(500px)
+rotateX(60deg)
+scale(1.7);
+
+transform-origin:center bottom;
+
+opacity:.5;
+
+mask-image:linear-gradient(
+to bottom,
+transparent 5%,
+black 65%,
+transparent 100%
+);
+}
+
+.scanlines{
+position:fixed;
+inset:0;
+z-index:20;
+pointer-events:none;
+
+background:
+repeating-linear-gradient(
+to bottom,
+transparent 0,
+transparent 3px,
+rgba(255,255,255,.012) 4px
+);
+}
+
+.noise{
+position:fixed;
+inset:0;
+z-index:19;
+pointer-events:none;
+opacity:.04;
+
+background-image:
+url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E");
+}
+
+
+/* =====================================================
+   GLOW ORBS
+===================================================== */
+
+.orb{
+position:fixed;
+border-radius:50%;
+filter:blur(90px);
+z-index:-7;
+pointer-events:none;
+}
+
+.orb1{
+width:280px;
+height:280px;
+background:#00e5ff;
+left:-120px;
+top:18%;
+opacity:.22;
+animation:orb1 9s infinite alternate ease-in-out;
+}
+
+.orb2{
+width:300px;
+height:300px;
+background:#ff008c;
+right:-130px;
+top:35%;
+opacity:.2;
+animation:orb2 11s infinite alternate ease-in-out;
+}
+
+.orb3{
+width:240px;
+height:240px;
+background:#7500ff;
+left:40%;
+bottom:-100px;
+opacity:.2;
+animation:orb3 12s infinite alternate ease-in-out;
+}
+
+@keyframes orb1{
+to{transform:translate(120px,100px)}
+}
+
+@keyframes orb2{
+to{transform:translate(-120px,100px)}
+}
+
+@keyframes orb3{
+to{transform:translate(100px,-100px)}
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+height:78px;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:0 6%;
+
+position:relative;
+z-index:30;
+
+background:rgba(3,4,10,.7);
+
+border-bottom:
+1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(18px);
+}
+
+.logo{
+width:145px;
+max-height:52px;
+object-fit:contain;
+}
+
+.logo-link{
+display:flex;
+}
+
+.nav-status{
+display:flex;
+align-items:center;
+gap:9px;
+
+font-size:10px;
+font-weight:800;
+
+letter-spacing:1.5px;
+color:#7ef8ff;
+
+margin-right:20px;
+}
+
+.status-dot{
+width:7px;
+height:7px;
+border-radius:50%;
+background:#00f0ff;
 
-  <meta charset="UTF-8">
+box-shadow:
+0 0 10px #00f0ff;
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+50%{
+opacity:.35;
+transform:scale(.7);
+}
+}
+
+.header-right{
+display:flex;
+align-items:center;
+gap:25px;
+}
 
-  <title>Sprinter Online | Official Platform</title>
+.header-btn{
+padding:11px 20px;
 
-  <meta
-    name="description"
-    content="Explore Sprinter Online's official platform and stay connected with the latest updates and community information."
-  >
+border:1px solid rgba(0,229,255,.4);
+border-radius:8px;
 
-  <link
-    rel="canonical"
-    href="https://www.sprinteronlines.com/landingpage/"
-  >
+text-decoration:none;
 
-  <meta
-    property="og:title"
-    content="Sprinter Online | Official Platform"
-  >
+font-size:11px;
+font-weight:900;
 
-  <meta
-    property="og:description"
-    content="Discover the official Sprinter Online platform."
-  >
+color:#fff;
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+background:
+rgba(0,229,255,.08);
 
+box-shadow:
+inset 0 0 15px rgba(0,229,255,.06);
+
+transition:.3s;
+}
+
+.header-btn:hover{
+background:#00e5ff;
+color:#03040a;
+box-shadow:
+0 0 25px rgba(0,229,255,.45);
+}
 
-  <!-- =========================================
-       META PIXEL
-       Pixel ID: 1732688021370064
-  ========================================== -->
 
-  <script>
+/* =====================================================
+   HERO
+===================================================== */
 
-    !function(f,b,e,v,n,t,s)
-    {
-      if(f.fbq)return;
+.hero{
+min-height:720px;
 
-      n=f.fbq=function()
-      {
-        n.callMethod ?
-        n.callMethod.apply(n,arguments) :
-        n.queue.push(arguments)
-      };
+padding:90px 6% 80px;
 
-      if(!f._fbq)f._fbq=n;
+display:grid;
 
-      n.push=n;
-      n.loaded=!0;
-      n.version='2.0';
-      n.queue=[];
+grid-template-columns:
+1.05fr
+.95fr;
 
-      t=b.createElement(e);
-      t.async=!0;
-      t.src=v;
+align-items:center;
 
-      s=b.getElementsByTagName(e)[0];
+gap:60px;
 
-      s.parentNode.insertBefore(t,s);
+position:relative;
+}
 
-    }(
-      window,
-      document,
-      'script',
-      'https://connect.facebook.net/en_US/fbevents.js'
-    );
+.hero-left{
+position:relative;
+z-index:2;
+}
 
+.small-label{
+display:inline-flex;
 
-    fbq(
-      'init',
-      '1732688021370064'
-    );
+align-items:center;
+gap:10px;
 
+padding:9px 14px;
 
-    fbq(
-      'track',
-      'PageView'
-    );
+border:1px solid rgba(0,229,255,.3);
 
-  </script>
+background:
+rgba(0,229,255,.06);
 
+font-family:Orbitron,sans-serif;
 
-  <!-- =========================================
-       END META PIXEL
-  ========================================== -->
+font-size:10px;
 
+letter-spacing:2px;
 
-  <style>
+color:#7ef8ff;
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+margin-bottom:25px;
 
+clip-path:
+polygon(
+0 0,
+94% 0,
+100% 35%,
+100% 100%,
+6% 100%,
+0 65%
+);
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+.hero h1{
+font-family:Orbitron,sans-serif;
 
+font-size:
+clamp(50px,7vw,92px);
 
-    body {
+line-height:.92;
 
-      min-height: 100vh;
+letter-spacing:-4px;
 
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
+font-weight:900;
 
-      color: #ffffff;
+margin-bottom:30px;
+}
 
-      overflow-x: hidden;
+.hero h1 span{
+display:block;
+}
 
-      background:
+.gradient{
+background:
+linear-gradient(
+90deg,
+#00e5ff,
+#fff,
+#ff31b7,
+#7b4dff
+);
 
-        radial-gradient(
-          circle at 15% 20%,
-          rgba(0, 234, 255, 0.15),
-          transparent 28%
-        ),
+background-size:300%;
 
-        radial-gradient(
-          circle at 85% 30%,
-          rgba(255, 0, 153, 0.16),
-          transparent 30%
-        ),
+-webkit-background-clip:text;
+background-clip:text;
 
-        radial-gradient(
-          circle at 50% 90%,
-          rgba(108, 44, 255, 0.18),
-          transparent 35%
-        ),
+color:transparent;
 
-        #05050d;
+animation:gradient 5s linear infinite;
+}
 
-    }
+@keyframes gradient{
+to{
+background-position:300%;
+}
+}
 
+.hero-text{
+max-width:590px;
 
-    /* =========================================
-       ANIMATED BACKGROUND
-    ========================================== */
+color:#989bad;
 
-    .background {
+font-size:16px;
 
-      position: fixed;
+line-height:1.8;
 
-      inset: 0;
+margin-bottom:35px;
+}
 
-      z-index: -2;
+.hero-actions{
+display:flex;
+gap:14px;
+flex-wrap:wrap;
+}
 
-      overflow: hidden;
+.btn{
+display:inline-flex;
 
-      pointer-events: none;
+align-items:center;
+justify-content:center;
+gap:12px;
 
-    }
+padding:16px 25px;
 
+text-decoration:none;
 
-    .orb {
+font-size:12px;
+font-weight:900;
 
-      position: absolute;
+letter-spacing:.5px;
 
-      width: 280px;
+border-radius:8px;
 
-      height: 280px;
+transition:.3s;
 
-      border-radius: 50%;
+position:relative;
 
-      filter: blur(80px);
+overflow:hidden;
+}
 
-      opacity: 0.35;
+.btn-primary{
+background:
+linear-gradient(
+100deg,
+#00e5ff,
+#4df4ff
+);
 
-      animation:
-        float 10s infinite alternate ease-in-out;
+color:#02040a;
 
-    }
+box-shadow:
+0 0 30px rgba(0,229,255,.25);
+}
 
+.btn-primary:hover{
+transform:translateY(-3px);
 
-    .orb.one {
+box-shadow:
+0 0 45px rgba(0,229,255,.5);
+}
 
-      background: #00eaff;
+.btn-secondary{
+border:
+1px solid rgba(255,255,255,.15);
 
-      top: -80px;
+color:#fff;
 
-      left: -80px;
+background:
+rgba(255,255,255,.04);
+}
 
-    }
+.btn-secondary:hover{
+border-color:#ff0099;
 
+background:
+rgba(255,0,153,.08);
+transform:translateY(-3px);
+}
 
-    .orb.two {
 
-      background: #ff1493;
+/* =====================================================
+   GAMING HUD VISUAL
+===================================================== */
 
-      right: -100px;
+.hero-right{
+position:relative;
 
-      top: 25%;
+display:flex;
+justify-content:center;
+align-items:center;
 
-      animation-delay: 2s;
+min-height:500px;
+}
 
-    }
+.hud{
+width:min(470px,100%);
+height:470px;
 
+position:relative;
 
-    .orb.three {
+border:
+1px solid rgba(0,229,255,.25);
 
-      background: #6c2cff;
+background:
+linear-gradient(
+145deg,
+rgba(0,229,255,.06),
+rgba(117,0,255,.08),
+rgba(255,0,153,.06)
+);
 
-      bottom: -100px;
+backdrop-filter:blur(20px);
 
-      left: 35%;
+box-shadow:
+0 0 80px rgba(0,0,0,.5),
+inset 0 0 60px rgba(0,229,255,.03);
 
-      animation-delay: 4s;
+clip-path:
+polygon(
+0 4%,
+4% 0,
+96% 0,
+100% 4%,
+100% 96%,
+96% 100%,
+4% 100%,
+0 96%
+);
+}
 
-    }
+.hud::before{
+content:"";
 
+position:absolute;
+inset:15px;
 
-    @keyframes float {
+border:
+1px solid rgba(255,255,255,.06);
 
-      from {
+clip-path:
+inherit;
+}
 
-        transform:
-          translate(0, 0)
-          scale(1);
+.hud-top{
+position:absolute;
 
-      }
+top:25px;
+left:30px;
+right:30px;
 
-      to {
+display:flex;
+justify-content:space-between;
 
-        transform:
-          translate(60px, 40px)
-          scale(1.2);
+font-family:Orbitron,sans-serif;
 
-      }
+font-size:8px;
 
-    }
+letter-spacing:2px;
 
+color:#687184;
+}
 
-    .grid {
+.hud-title{
+position:absolute;
 
-      position: fixed;
+top:70px;
+left:0;
+right:0;
 
-      inset: 0;
+text-align:center;
 
-      z-index: -1;
+font-family:Orbitron,sans-serif;
 
-      opacity: 0.07;
+font-size:11px;
 
-      background-image:
+letter-spacing:4px;
 
-        linear-gradient(
-          rgba(255,255,255,0.5) 1px,
-          transparent 1px
-        ),
+color:#7ef8ff;
+}
 
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,0.5) 1px,
-          transparent 1px
-        );
+.hud-core{
+position:absolute;
 
-      background-size: 45px 45px;
+left:50%;
+top:50%;
 
-      transform:
+transform:translate(-50%,-50%);
 
-        perspective(500px)
-        rotateX(55deg)
-        scale(1.8);
+width:260px;
+height:260px;
 
-      transform-origin:
-        center bottom;
+border-radius:50%;
 
-    }
+display:flex;
+align-items:center;
+justify-content:center;
 
+background:
+radial-gradient(
+circle,
+rgba(0,229,255,.16),
+rgba(123,0,255,.08) 50%,
+transparent 70%
+);
 
-    /* =========================================
-       HEADER
-    ========================================== */
+border:
+1px solid rgba(0,229,255,.25);
 
-    header {
+box-shadow:
+0 0 60px rgba(0,229,255,.15);
+}
 
-      width: 100%;
+.hud-core::before,
+.hud-core::after{
+content:"";
 
-      padding: 18px 20px;
+position:absolute;
 
-      position: relative;
+border-radius:50%;
 
-      z-index: 5;
+border:1px solid rgba(0,229,255,.3);
+}
 
-    }
+.hud-core::before{
+width:210px;
+height:210px;
 
+border-top-color:#00e5ff;
 
-    .nav {
+animation:spin 7s linear infinite;
+}
 
-      max-width: 1050px;
+.hud-core::after{
+width:175px;
+height:175px;
 
-      margin: auto;
+border-right-color:#ff0099;
 
-      display: flex;
+animation:spin 5s linear infinite reverse;
+}
 
-      align-items: center;
+@keyframes spin{
+to{
+transform:rotate(360deg);
+}
+}
 
-      justify-content: space-between;
+.bonus-core{
+position:relative;
+z-index:3;
 
-    }
+text-align:center;
+}
 
+.bonus-core small{
+display:block;
 
-    .logo-link {
+font-family:Orbitron,sans-serif;
 
-      display: inline-block;
+font-size:9px;
 
-    }
+letter-spacing:3px;
 
+color:#b8bdca;
 
-    .logo {
+margin-bottom:5px;
+}
 
-      width: 150px;
+.bonus-core strong{
+display:block;
 
-      max-width: 42vw;
+font-family:Orbitron,sans-serif;
 
-      height: auto;
+font-size:65px;
 
-      filter:
+line-height:1;
 
-        drop-shadow(
-          0 0 8px
-          rgba(0,255,255,0.5)
-        )
+font-weight:900;
 
-        drop-shadow(
-          0 0 18px
-          rgba(255,0,153,0.25)
-        );
+background:
+linear-gradient(
+135deg,
+#00e5ff,
+#fff,
+#ff36bb
+);
 
-      transition:
-        transform 0.25s ease;
+-webkit-background-clip:text;
+background-clip:text;
 
-    }
+color:transparent;
 
+text-shadow:
+0 0 35px rgba(0,229,255,.2);
+}
 
-    .logo:hover {
+.hud-corner{
+position:absolute;
 
-      transform:
-        scale(1.04);
+font-family:Orbitron,sans-serif;
 
-    }
+font-size:8px;
 
+letter-spacing:1px;
 
-    .status {
+color:#606779;
+}
 
-      display: flex;
+.c1{
+left:30px;
+bottom:30px;
+}
 
-      align-items: center;
+.c2{
+right:30px;
+bottom:30px;
+}
 
-      gap: 8px;
+.c3{
+left:30px;
+top:110px;
+}
 
-      padding: 9px 15px;
+.c4{
+right:30px;
+top:110px;
+}
 
-      border-radius: 30px;
+.corner-line{
+position:absolute;
 
-      background:
-        rgba(255,255,255,0.06);
+width:45px;
+height:1px;
 
-      border:
-        1px solid
-        rgba(255,255,255,0.12);
+background:#00e5ff;
 
-      backdrop-filter:
-        blur(12px);
+opacity:.6;
+}
 
-      font-size: 12px;
+.c1 .corner-line,
+.c3 .corner-line{
+left:0;
+bottom:-7px;
+}
 
-      color: #d9d9e8;
+.c2 .corner-line,
+.c4 .corner-line{
+right:0;
+bottom:-7px;
+background:#ff0099;
+}
 
-    }
 
+/* =====================================================
+   BONUS SECTION
+===================================================== */
 
-    .dot {
+.bonus-section{
+padding:20px 6% 100px;
+}
 
-      width: 8px;
+.section-frame{
+max-width:1050px;
 
-      height: 8px;
+margin:auto;
 
-      border-radius: 50%;
+position:relative;
 
-      background: #00ff9d;
+padding:60px 40px;
 
-      box-shadow:
-        0 0 12px #00ff9d;
+border:
+1px solid rgba(255,255,255,.1);
 
-      animation:
-        pulse 1.5s infinite;
+background:
+linear-gradient(
+135deg,
+rgba(0,229,255,.055),
+rgba(122,0,255,.08),
+rgba(255,0,153,.055)
+);
 
-    }
+overflow:hidden;
 
+text-align:center;
 
-    @keyframes pulse {
+box-shadow:
+0 30px 100px rgba(0,0,0,.45);
+}
 
-      50% {
+.section-frame::before{
+content:"";
 
-        opacity: 0.35;
+position:absolute;
 
-        transform:
-          scale(0.7);
+width:300px;
+height:300px;
 
-      }
+background:#00e5ff;
 
-    }
+filter:blur(120px);
 
+opacity:.12;
 
-    /* =========================================
-       HERO
-    ========================================== */
+left:-120px;
+top:-150px;
+}
 
-    .hero {
+.section-frame::after{
+content:"";
 
-      max-width: 1050px;
+position:absolute;
 
-      margin: auto;
+width:300px;
+height:300px;
 
-      min-height: 72vh;
+background:#ff0099;
 
-      display: flex;
+filter:blur(120px);
 
-      align-items: center;
+opacity:.12;
 
-      justify-content: center;
+right:-120px;
+bottom:-150px;
+}
 
-      text-align: center;
+.frame-label{
+font-family:Orbitron,sans-serif;
 
-      padding:
-        55px 20px 30px;
+font-size:10px;
 
-    }
+letter-spacing:3px;
 
+color:#00e5ff;
 
-    .hero-content {
+margin-bottom:15px;
+}
 
-      width: 100%;
+.big-bonus{
+position:relative;
+z-index:2;
 
-      max-width: 760px;
+font-family:Orbitron,sans-serif;
 
-    }
+font-size:
+clamp(85px,15vw,170px);
 
+line-height:.9;
 
-    .tag {
+font-weight:900;
 
-      display: inline-flex;
+letter-spacing:-10px;
 
-      align-items: center;
+background:
+linear-gradient(
+90deg,
+#00e5ff,
+#ffffff,
+#ff159d
+);
 
-      gap: 8px;
+-webkit-background-clip:text;
+background-clip:text;
 
-      padding:
-        9px 17px;
+color:transparent;
 
-      border-radius: 50px;
+filter:
+drop-shadow(
+0 0 30px
+rgba(0,229,255,.15)
+);
+}
 
-      background:
-        rgba(0,238,255,0.08);
+.offer-title{
+font-family:Orbitron,sans-serif;
 
-      border:
-        1px solid
-        rgba(0,238,255,0.3);
+font-size:
+clamp(24px,4vw,42px);
 
-      color: #7df7ff;
+letter-spacing:3px;
 
-      font-size: 12px;
+margin-top:12px;
 
-      letter-spacing: 1.5px;
+position:relative;
+z-index:2;
+}
 
-      text-transform: uppercase;
+.offer-description{
+max-width:620px;
 
-      margin-bottom: 24px;
+margin:20px auto 30px;
 
-      animation:
-        fadeUp 0.8s ease both;
+font-size:14px;
 
-    }
+line-height:1.8;
 
+color:#9599aa;
 
-    h1 {
+position:relative;
+z-index:2;
+}
 
-      font-size:
-        clamp(42px, 8vw, 82px);
+.offer-btn{
+position:relative;
+z-index:2;
 
-      line-height: 0.95;
+display:inline-flex;
 
-      font-weight: 900;
+align-items:center;
+justify-content:center;
 
-      letter-spacing: -3px;
+gap:12px;
 
-      margin-bottom: 24px;
+padding:16px 30px;
 
-      animation:
-        fadeUp 0.8s 0.1s ease both;
+background:
+linear-gradient(
+100deg,
+#ff0099,
+#7b00ff
+);
 
-    }
+border-radius:8px;
 
+text-decoration:none;
 
-    .gradient-text {
+color:#fff;
 
-      background:
+font-size:12px;
 
-        linear-gradient(
-          90deg,
-          #00eaff,
-          #ffffff,
-          #ff2ca8,
-          #8d5cff,
-          #00eaff
-        );
+font-weight:900;
 
-      background-size:
-        300% auto;
+letter-spacing:1px;
 
-      -webkit-background-clip:
-        text;
+box-shadow:
+0 0 35px rgba(255,0,153,.2);
 
-      background-clip:
-        text;
+transition:.3s;
+}
 
-      color:
-        transparent;
+.offer-btn:hover{
+transform:translateY(-3px);
 
-      animation:
-        gradientMove 5s
-        linear infinite;
+box-shadow:
+0 0 50px rgba(255,0,153,.4);
+}
 
-    }
+.terms{
+position:relative;
+z-index:2;
 
+margin-top:17px;
 
-    @keyframes gradientMove {
+font-size:10px;
 
-      to {
+color:#5f6372;
+}
 
-        background-position:
-          300% center;
 
-      }
+/* =====================================================
+   FEATURE SECTION
+===================================================== */
 
-    }
+.features{
+padding:20px 6% 100px;
+}
 
+.section-header{
+max-width:700px;
 
-    .hero p {
+margin:0 auto 45px;
 
-      max-width: 620px;
+text-align:center;
+}
 
-      margin: auto;
+.section-header small{
+font-family:Orbitron,sans-serif;
 
-      color: #b8b8ca;
+font-size:10px;
 
-      font-size: 17px;
+letter-spacing:3px;
 
-      line-height: 1.7;
+color:#ff31b7;
+}
 
-      animation:
-        fadeUp 0.8s 0.2s ease both;
+.section-header h2{
+font-family:Orbitron,sans-serif;
 
-    }
+font-size:
+clamp(30px,5vw,50px);
 
+margin:12px 0;
 
-    @keyframes fadeUp {
+letter-spacing:-2px;
+}
 
-      from {
+.section-header p{
+font-size:14px;
 
-        opacity: 0;
+line-height:1.7;
 
-        transform:
-          translateY(25px);
+color:#858999;
+}
 
-      }
+.cards{
+max-width:1100px;
 
-      to {
+margin:auto;
 
-        opacity: 1;
+display:grid;
 
-        transform:
-          translateY(0);
+grid-template-columns:
+repeat(3,1fr);
 
-      }
+gap:18px;
+}
 
-    }
+.card{
+position:relative;
 
+padding:32px;
 
-    /* =========================================
-       BUTTONS
-    ========================================== */
+min-height:220px;
 
-    .buttons {
+border:
+1px solid rgba(255,255,255,.08);
 
-      display: flex;
+background:
+rgba(255,255,255,.025);
 
-      justify-content: center;
+overflow:hidden;
 
-      gap: 14px;
+transition:.35s;
+}
 
-      flex-wrap: wrap;
+.card:hover{
+transform:translateY(-8px);
 
-      margin-top: 32px;
+border-color:
+rgba(0,229,255,.3);
 
-      animation:
-        fadeUp 0.8s 0.3s ease both;
+box-shadow:
+0 25px 70px rgba(0,0,0,.35);
+}
 
-    }
+.card-number{
+font-family:Orbitron,sans-serif;
 
+font-size:10px;
 
-    .btn {
+color:#4d5565;
 
-      position: relative;
+letter-spacing:2px;
 
-      display: inline-flex;
+margin-bottom:25px;
+}
 
-      justify-content: center;
+.card-icon{
+font-size:30px;
 
-      align-items: center;
+margin-bottom:18px;
 
-      min-width: 175px;
+filter:
+drop-shadow(
+0 0 10px
+rgba(0,229,255,.5)
+);
+}
 
-      padding:
-        15px 26px;
+.card h3{
+font-family:Orbitron,sans-serif;
 
-      border-radius: 12px;
+font-size:17px;
 
-      text-decoration: none;
+margin-bottom:10px;
+}
 
-      font-weight: 800;
+.card p{
+font-size:13px;
 
-      font-size: 14px;
+line-height:1.7;
 
-      transition:
-        0.25s ease;
+color:#7f8393;
+}
 
-      overflow: hidden;
+.card-line{
+position:absolute;
 
-      cursor: pointer;
+height:2px;
 
-    }
+width:0;
 
+bottom:0;
+left:0;
 
-    .btn-primary {
+background:
+linear-gradient(
+90deg,
+#00e5ff,
+#ff0099
+);
 
-      color: #05050d;
+transition:.5s;
+}
 
-      background:
+.card:hover .card-line{
+width:100%;
+}
 
-        linear-gradient(
-          100deg,
-          #00eaff,
-          #73fff3
-        );
 
-      box-shadow:
+/* =====================================================
+   FINAL CTA
+===================================================== */
 
-        0 0 18px
-        rgba(0,234,255,0.35),
+.final{
+padding:20px 6% 100px;
+}
 
-        0 8px 30px
-        rgba(0,0,0,0.25);
+.final-box{
+max-width:1000px;
 
-    }
+margin:auto;
 
+padding:65px 30px;
 
-    .btn-primary::before {
+text-align:center;
 
-      content: "";
+border:
+1px solid rgba(0,229,255,.12);
 
-      position: absolute;
+background:
+linear-gradient(
+135deg,
+rgba(0,229,255,.05),
+rgba(255,0,153,.05)
+);
+}
 
-      width: 70px;
+.final-box h2{
+font-family:Orbitron,sans-serif;
 
-      height: 150px;
+font-size:
+clamp(28px,5vw,52px);
 
-      background:
-        rgba(255,255,255,0.45);
+margin-bottom:15px;
+}
 
-      transform:
-        rotate(25deg);
+.final-box p{
+max-width:600px;
 
-      left: -100px;
+margin:0 auto 28px;
 
-      transition:
-        0.5s;
+font-size:14px;
 
-    }
+line-height:1.7;
 
+color:#858999;
+}
 
-    .btn-primary:hover::before {
 
-      left: 120%;
+/* =====================================================
+   FOOTER
+===================================================== */
 
-    }
+footer{
+padding:25px 6%;
 
+border-top:
+1px solid rgba(255,255,255,.07);
 
-    .btn-secondary {
+display:flex;
 
-      color: #ffffff;
+justify-content:space-between;
 
-      border:
-        1px solid
-        rgba(255,255,255,0.2);
+align-items:center;
 
-      background:
-        rgba(255,255,255,0.06);
+font-size:10px;
 
-      backdrop-filter:
-        blur(10px);
+letter-spacing:.5px;
 
-    }
+color:#5f6371;
+}
 
+.footer-brand{
+color:#fff;
 
-    .btn:hover {
+font-weight:800;
+}
 
-      transform:
-        translateY(-3px);
 
-    }
+/* =====================================================
+   MOBILE
+===================================================== */
 
+@media(max-width:850px){
 
-    .btn:active {
+header{
+padding:0 5%;
+}
 
-      transform:
-        translateY(0);
+.nav-status{
+display:none;
+}
 
-    }
+.hero{
+grid-template-columns:1fr;
 
+text-align:center;
 
-    /* =========================================
-       FEATURES
-    ========================================== */
+padding:
+70px 5%
+60px;
 
-    .features {
+gap:40px;
+}
 
-      max-width: 1050px;
+.hero-text{
+margin-left:auto;
+margin-right:auto;
+}
 
-      margin: auto;
+.hero-actions{
+justify-content:center;
+}
 
-      padding:
-        25px 20px 80px;
+.hero-right{
+min-height:400px;
+}
 
-    }
+.hud{
+width:390px;
+height:390px;
+}
 
+.cards{
+grid-template-columns:1fr;
+}
 
-    .section-title {
+.bonus-section,
+.features,
+.final{
+padding-left:5%;
+padding-right:5%;
+}
 
-      text-align: center;
+}
 
-      margin-bottom: 28px;
 
-    }
+@media(max-width:500px){
 
+.logo{
+width:120px;
+}
 
-    .section-title span {
+.header-btn{
+padding:9px 13px;
 
-      color: #77778e;
+font-size:9px;
+}
 
-      font-size: 12px;
+.hero{
+padding-top:55px;
+}
 
-      text-transform: uppercase;
+.hero h1{
+font-size:51px;
 
-      letter-spacing: 2px;
+letter-spacing:-3px;
+}
 
-    }
+.hero-text{
+font-size:14px;
+}
 
+.hero-actions{
+flex-direction:column;
+}
 
-    .section-title h2 {
+.btn{
+width:100%;
+}
 
-      font-size: 30px;
+.hud{
+width:320px;
+height:320px;
+}
 
-      margin-top: 8px;
+.hud-core{
+width:205px;
+height:205px;
+}
 
-    }
+.hud-core::before{
+width:165px;
+height:165px;
+}
 
+.hud-core::after{
+width:135px;
+height:135px;
+}
 
-    .cards {
+.bonus-core strong{
+font-size:50px;
+}
 
-      display: grid;
+.section-frame{
+padding:
+50px 20px;
+}
 
-      grid-template-columns:
-        repeat(3, 1fr);
+.big-bonus{
+font-size:88px;
 
-      gap: 18px;
+letter-spacing:-6px;
+}
 
-    }
+.offer-title{
+font-size:23px;
 
+letter-spacing:1px;
+}
 
-    .card {
+.offer-btn{
+width:100%;
+}
 
-      position: relative;
+footer{
+flex-direction:column;
 
-      padding:
-        28px 22px;
+text-align:center;
 
-      min-height: 175px;
+gap:10px;
+}
 
-      border-radius: 20px;
+}
 
-      background:
-
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,0.09),
-          rgba(255,255,255,0.025)
-        );
-
-      border:
-        1px solid
-        rgba(255,255,255,0.1);
-
-      backdrop-filter:
-        blur(16px);
-
-      overflow: hidden;
-
-      transition:
-        0.3s ease;
-
-    }
-
-
-    .card::after {
-
-      content: "";
-
-      position: absolute;
-
-      width: 130px;
-
-      height: 130px;
-
-      border-radius: 50%;
-
-      right: -70px;
-
-      bottom: -70px;
-
-      background:
-        rgba(0,234,255,0.13);
-
-      filter:
-        blur(20px);
-
-    }
-
-
-    .card:hover {
-
-      transform:
-        translateY(-7px);
-
-      border-color:
-        rgba(0,234,255,0.35);
-
-      box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.25);
-
-    }
-
-
-    .icon {
-
-      width: 45px;
-
-      height: 45px;
-
-      border-radius: 13px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      margin-bottom: 18px;
-
-      font-size: 21px;
-
-      background:
-
-        linear-gradient(
-          135deg,
-          rgba(0,234,255,0.2),
-          rgba(255,0,153,0.18)
-        );
-
-      border:
-        1px solid
-        rgba(255,255,255,0.12);
-
-    }
-
-
-    .card h3 {
-
-      font-size: 17px;
-
-      margin-bottom: 9px;
-
-    }
-
-
-    .card p {
-
-      color: #9292a7;
-
-      font-size: 13px;
-
-      line-height: 1.6;
-
-    }
-
-
-    /* =========================================
-       HIGHLIGHT
-    ========================================== */
-
-    .highlight {
-
-      max-width: 1050px;
-
-      margin:
-        0 auto 75px;
-
-      padding:
-        0 20px;
-
-    }
-
-
-    .highlight-box {
-
-      position: relative;
-
-      padding:
-        40px 30px;
-
-      text-align: center;
-
-      border-radius: 24px;
-
-      overflow: hidden;
-
-      background:
-
-        linear-gradient(
-          120deg,
-          rgba(0,234,255,0.12),
-          rgba(116,54,255,0.12),
-          rgba(255,0,153,0.12)
-        );
-
-      border:
-        1px solid
-        rgba(255,255,255,0.12);
-
-    }
-
-
-    .highlight-box h2 {
-
-      font-size:
-        clamp(25px, 5vw, 42px);
-
-      margin-bottom: 12px;
-
-    }
-
-
-    .highlight-box p {
-
-      max-width: 600px;
-
-      margin: auto;
-
-      color: #aaaabd;
-
-      line-height: 1.7;
-
-      font-size: 14px;
-
-    }
-
-
-    /* =========================================
-       FOOTER
-    ========================================== */
-
-    footer {
-
-      text-align: center;
-
-      padding:
-        25px 20px 35px;
-
-      border-top:
-        1px solid
-        rgba(255,255,255,0.07);
-
-      color: #68687b;
-
-      font-size: 12px;
-
-    }
-
-
-    footer strong {
-
-      color: #aaaabd;
-
-    }
-
-
-    /* =========================================
-       MOBILE
-    ========================================== */
-
-    @media (max-width: 760px) {
-
-      .hero {
-
-        min-height: 70vh;
-
-        padding-top: 45px;
-
-      }
-
-
-      h1 {
-
-        letter-spacing: -2px;
-
-      }
-
-
-      .hero p {
-
-        font-size: 15px;
-
-      }
-
-
-      .cards {
-
-        grid-template-columns: 1fr;
-
-      }
-
-
-      .card {
-
-        min-height: auto;
-
-      }
-
-
-      .status {
-
-        display: none;
-
-      }
-
-
-      .logo {
-
-        width: 135px;
-
-      }
-
-
-      .buttons {
-
-        flex-direction: column;
-
-        align-items: center;
-
-      }
-
-
-      .btn {
-
-        width:
-          min(100%, 330px);
-
-      }
-
-
-      .highlight-box {
-
-        padding:
-          35px 20px;
-
-      }
-
-    }
-
-
-    /* =========================================
-       SMALL MOBILE
-    ========================================== */
-
-    @media (max-width: 380px) {
-
-      h1 {
-
-        font-size: 39px;
-
-      }
-
-
-      .hero {
-
-        padding-left: 15px;
-
-        padding-right: 15px;
-
-      }
-
-
-      .features,
-      .highlight {
-
-        padding-left: 15px;
-
-        padding-right: 15px;
-
-      }
-
-    }
-
-  </style>
-
+</style>
 </head>
 
 
 <body>
 
+<div class="cyber-grid"></div>
+<div class="scanlines"></div>
+<div class="noise"></div>
 
-  <!-- =========================================
-       BACKGROUND
-  ========================================== -->
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
 
-  <div class="background">
 
-    <div class="orb one"></div>
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
-    <div class="orb two"></div>
+<header>
 
-    <div class="orb three"></div>
+<a
+class="logo-link"
+href="https://t.me/sprinteronlineid"
+target="_blank"
+rel="noopener noreferrer"
+onclick="trackTelegramClick()"
+>
 
-  </div>
+<img
+src="../assets/images/sprinterslogo.png"
+alt="Sprinter Online"
+class="logo"
+>
 
+</a>
 
-  <div class="grid"></div>
 
+<div class="header-right">
 
-  <!-- =========================================
-       HEADER
-  ========================================== -->
+<div class="nav-status">
+<span class="status-dot"></span>
+ONLINE
+</div>
 
-  <header>
+<a
+class="header-btn"
+href="https://t.me/sprinteronlineid"
+target="_blank"
+rel="noopener noreferrer"
+onclick="trackTelegramClick()"
+>
+CHECK OFFER
+</a>
 
-    <div class="nav">
+</div>
 
+</header>
 
-      <!-- LOGO → TELEGRAM -->
 
-      <a
-        class="logo-link"
-        href="https://t.me/sprinteronlineid"
-        target="_blank"
-        rel="noopener noreferrer"
-        onclick="trackTelegramClick()"
-      >
 
-        <img
-          src="../assets/images/sprinterslogo.png"
-          alt="Sprinter Online"
-          class="logo"
-        >
+<!-- =====================================================
+     HERO
+===================================================== -->
 
-      </a>
+<section class="hero">
 
+<div class="hero-left">
 
-      <div class="status">
+<div class="small-label">
+✦ SPRINTER ONLINE
+</div>
 
-        <span class="dot"></span>
+<h1>
 
-        Official Platform
+<span>
+PLAY
+</span>
 
-      </div>
+<span class="gradient">
+DIFFERENT.
+</span>
 
+</h1>
 
-    </div>
+<p class="hero-text">
+Discover a bold digital experience with a
+futuristic interface, current offers and the
+latest information available through the
+official channel.
+</p>
 
-  </header>
 
+<div class="hero-actions">
 
-  <!-- =========================================
-       MAIN
-  ========================================== -->
+<a
+class="btn btn-primary"
+href="https://t.me/sprinteronlineid"
+target="_blank"
+rel="noopener noreferrer"
+onclick="trackTelegramClick()"
+>
+CHECK LATEST OFFER
+<span>→</span>
+</a>
 
-  <main>
 
+<a
+class="btn btn-secondary"
+href="#bonus"
+>
+VIEW 100% OFFER
+</a>
 
-    <!-- HERO -->
+</div>
 
-    <section class="hero">
+</div>
 
-      <div class="hero-content">
 
 
-        <div class="tag">
+<!-- =====================================================
+     HUD
+===================================================== -->
 
-          ✦ Welcome to Sprinter Online
+<div class="hero-right">
 
-        </div>
+<div class="hud">
 
+<div class="hud-top">
+<span>SPRINTER // SYSTEM</span>
+<span>ONLINE</span>
+</div>
 
-        <h1>
+<div class="hud-title">
+FEATURED OFFER
+</div>
 
-          <span class="gradient-text">
 
-            PLAY DIFFERENT.
+<div class="hud-core">
 
-          </span>
+<div class="bonus-core">
 
-        </h1>
+<small>
+LIMITED OFFER
+</small>
 
+<strong>
+100%
+</strong>
 
-        <p>
+<small>
+BONUS
+</small>
 
-          Discover the official Sprinter Online platform,
-          explore the latest updates and stay connected
-          with the Sprinter community.
+</div>
 
-        </p>
+</div>
 
 
-        <!-- CTA BUTTONS -->
+<div class="hud-corner c1">
+SYSTEM 01
+<div class="corner-line"></div>
+</div>
 
-        <div class="buttons">
+<div class="hud-corner c2">
+ACTIVE
+<div class="corner-line"></div>
+</div>
 
+<div class="hud-corner c3">
+SPRINTER
+<div class="corner-line"></div>
+</div>
 
-          <!-- TELEGRAM CTA -->
+<div class="hud-corner c4">
+2026
+<div class="corner-line"></div>
+</div>
 
-          <a
-            class="btn btn-primary"
-            href="https://t.me/sprinteronlineid"
-            target="_blank"
-            rel="noopener noreferrer"
-            onclick="trackTelegramClick()"
-          >
+</div>
 
-            Explore Now
+</div>
 
-          </a>
+</section>
 
 
-          <!-- SCROLL CTA -->
 
-          <a
-            class="btn btn-secondary"
-            href="#features"
-          >
+<!-- =====================================================
+     BONUS
+===================================================== -->
 
-            Discover More
+<section
+class="bonus-section"
+id="bonus"
+>
 
-          </a>
+<div class="section-frame">
 
+<div class="frame-label">
+✦ FEATURED OFFER
+</div>
 
-        </div>
+<div class="big-bonus">
+100%
+</div>
 
+<div class="offer-title">
+BONUS OFFER
+</div>
 
-      </div>
+<p class="offer-description">
+Check the latest Sprinter Online offer,
+eligibility and applicable terms through
+the official channel.
+</p>
 
-    </section>
+<a
+class="offer-btn"
+href="https://t.me/sprinteronlineid"
+target="_blank"
+rel="noopener noreferrer"
+onclick="trackTelegramClick()"
+>
+CHECK OFFER
+<span>→</span>
+</a>
 
+<div class="terms">
+Terms and eligibility apply.
+</div>
 
-    <!-- =========================================
-         FEATURES
-    ========================================== -->
+</div>
 
-    <section
-      class="features"
-      id="features"
-    >
+</section>
 
 
-      <div class="section-title">
 
-        <span>
-          Why Sprinter
-        </span>
+<!-- =====================================================
+     FEATURES
+===================================================== -->
 
-        <h2>
-          Built for a modern experience
-        </h2>
+<section class="features">
 
-      </div>
+<div class="section-header">
 
+<small>
+SYSTEM FEATURES
+</small>
 
-      <div class="cards">
+<h2>
+BUILT DIFFERENT.
+</h2>
 
+<p>
+A futuristic interface combining neon
+visuals, modern layouts and a responsive
+digital experience.
+</p>
 
-        <div class="card">
+</div>
 
-          <div class="icon">
-            ⚡
-          </div>
 
-          <h3>
-            Fast Experience
-          </h3>
+<div class="cards">
 
-          <p>
-            A streamlined platform designed
-            for a smooth and responsive
-            experience across devices.
-          </p>
 
-        </div>
+<div class="card">
 
+<div class="card-number">
+01 // EXPERIENCE
+</div>
 
-        <div class="card">
+<div class="card-icon">
+⚡
+</div>
 
-          <div class="icon">
-            ✦
-          </div>
+<h3>
+FAST EXPERIENCE
+</h3>
 
-          <h3>
-            Modern Platform
-          </h3>
+<p>
+Responsive layouts designed to look sharp
+across desktop, tablet and mobile screens.
+</p>
 
-          <p>
-            Clean navigation, modern visuals
-            and an experience designed around
-            simplicity.
-          </p>
+<div class="card-line"></div>
 
-        </div>
+</div>
 
 
-        <div class="card">
 
-          <div class="icon">
-            ◈
-          </div>
+<div class="card">
 
-          <h3>
-            Stay Connected
-          </h3>
+<div class="card-number">
+02 // DESIGN
+</div>
 
-          <p>
-            Follow the official channel for
-            announcements, updates and
-            community information.
-          </p>
+<div class="card-icon">
+◈
+</div>
 
-        </div>
+<h3>
+NEON INTERFACE
+</h3>
 
+<p>
+A futuristic visual system with glowing
+elements, glass panels and cyber-inspired
+details.
+</p>
 
-      </div>
+<div class="card-line"></div>
 
-    </section>
+</div>
 
 
-    <!-- =========================================
-         HIGHLIGHT
-    ========================================== -->
 
-    <section class="highlight">
+<div class="card">
 
-      <div class="highlight-box">
+<div class="card-number">
+03 // CONNECT
+</div>
 
+<div class="card-icon">
+✦
+</div>
 
-        <h2>
-          Something different is here.
-        </h2>
+<h3>
+STAY CONNECTED
+</h3>
 
+<p>
+Check the official channel for the latest
+information, updates and applicable offers.
+</p>
 
-        <p>
+<div class="card-line"></div>
 
-          Keep up with Sprinter Online through
-          the official platform and community
-          channel. Check the latest information
-          and updates whenever you need them.
+</div>
 
-        </p>
 
+</div>
 
-        <div class="buttons">
+</section>
 
 
-          <!-- TELEGRAM CTA -->
 
-          <a
-            class="btn btn-primary"
-            href="https://t.me/sprinteronlineid"
-            target="_blank"
-            rel="noopener noreferrer"
-            onclick="trackTelegramClick()"
-          >
+<!-- =====================================================
+     FINAL CTA
+===================================================== -->
 
-            Connect Now
+<section class="final">
 
-          </a>
+<div class="final-box">
 
+<h2>
+READY TO EXPLORE?
+</h2>
 
-        </div>
+<p>
+Visit the official channel and check the
+latest Sprinter Online information and
+current offer details.
+</p>
 
+<a
+class="btn btn-primary"
+href="https://t.me/sprinteronlineid"
+target="_blank"
+rel="noopener noreferrer"
+onclick="trackTelegramClick()"
+>
+CHECK LATEST OFFER
+<span>→</span>
+</a>
 
-      </div>
+</div>
 
-    </section>
+</section>
 
 
-  </main>
 
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
-  <!-- =========================================
-       FOOTER
-  ========================================== -->
+<footer>
 
-  <footer>
+<div>
+© 2026
+<span class="footer-brand">
+Sprinter Online
+</span>
+</div>
 
-    © 2026
+<div>
+Terms and eligibility apply.
+</div>
 
-    <strong>
-      Sprinter Online
-    </strong>.
+</footer>
 
-    All rights reserved.
 
-  </footer>
 
+<!-- =====================================================
+     TELEGRAM TRACKING
+===================================================== -->
 
-  <!-- =========================================
-       TELEGRAM CLICK TRACKING
-  ========================================== -->
+<script>
 
-  <script>
+function trackTelegramClick(){
 
-    function trackTelegramClick() {
+if(typeof fbq === "function"){
 
-      if (
-        typeof fbq === "function"
-      ) {
+fbq(
+"track",
+"Contact"
+);
 
-        fbq(
-          "track",
-          "Contact"
-        );
+}
 
-      }
+}
 
-    }
-
-  </script>
-
-
-  <!-- =========================================
-       META PIXEL NOSCRIPT
-  ========================================== -->
-
-  <noscript>
-
-    <img
-      height="1"
-      width="1"
-      style="display:none"
-      src="https://www.facebook.com/tr?id=1732688021370064&ev=PageView&noscript=1"
-      alt=""
-    >
-
-  </noscript>
-
+</script>
 
 </body>
 </html>
+```
