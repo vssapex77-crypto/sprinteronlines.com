@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Discover upcoming events, community activities and the latest announcements.">
+
+    <meta name="robots"
+          content="index, follow">
+
+    <title>Sprinters | Events & Community</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #081313;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* HEADER */
+
+        header {
+            background: #0d1c1c;
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .nav {
+            max-width: 1150px;
+            min-height: 72px;
+            margin: auto;
+            padding: 0 24px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-size: 21px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: #cbd8d8;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 650px;
+            padding: 80px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #284747 0%,
+                    #152929 38%,
+                    #081313 75%
+                );
+        }
+
+        .hero-inner {
+            width: 100%;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .logo {
+            width: 280px;
+            max-width: 80%;
+            height: auto;
+            margin: 0 auto 32px;
+            display: block;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 17px;
+            margin-bottom: 22px;
+
+            border: 1px solid rgba(255,255,255,.15);
+            border-radius: 50px;
+
+            color: #d7e3e3;
+            background: rgba(255,255,255,.04);
+
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 22px;
+        }
+
+        .hero-text {
+            max-width: 680px;
+            margin: 0 auto 32px;
+
+            color: #afc0c0;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            min-width: 210px;
+            padding: 16px 30px;
+
+            border-radius: 8px;
+
+            background: #229ed9;
+            color: #ffffff;
+
+            font-size: 16px;
+            font-weight: 800;
+
+            transition: .2s ease;
+        }
+
+        .cta:hover {
+            transform: translateY(-2px);
+            opacity: .9;
+        }
+
+        .hero-note {
+            margin-top: 18px;
+            color: #718383;
+            font-size: 12px;
+        }
+
+        /* EVENTS */
+
+        .events-section {
+            padding: 85px 20px;
+            background: #0d1d1d;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin: 0 auto 45px;
+            text-align: center;
+        }
+
+        .section-heading h2 {
+            font-size: clamp(30px, 5vw, 44px);
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: #91a3a3;
+            font-size: 15px;
+        }
+
+        .events {
+            max-width: 1100px;
+            margin: auto;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .event {
+            padding: 30px;
+
+            background: #142727;
+
+            border: 1px solid rgba(255,255,255,.07);
+            border-radius: 14px;
+
+            transition: .2s ease;
+        }
+
+        .event:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,.15);
+        }
+
+        .event-date {
+            display: inline-block;
+
+            padding: 6px 11px;
+            margin-bottom: 18px;
+
+            border-radius: 6px;
+
+            background: rgba(255,255,255,.07);
+
+            color: #dce7e7;
+
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .event h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .event p {
+            color: #91a3a3;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        /* COMMUNITY */
+
+        .community {
+            padding: 85px 20px;
+            background: #111f1f;
+        }
+
+        .community-inner {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .community h2 {
+            font-size: clamp(30px, 5vw, 42px);
+            margin-bottom: 18px;
+        }
+
+        .community p {
+            color: #9eafaf;
+            font-size: 15px;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* CTA */
+
+        .cta-section {
+            padding: 80px 20px;
+            text-align: center;
+            background: #091616;
+        }
+
+        .cta-section h2 {
+            font-size: clamp(30px, 5vw, 42px);
+            margin-bottom: 12px;
+        }
+
+        .cta-section p {
+            max-width: 620px;
+            margin: 0 auto 25px;
+
+            color: #91a3a3;
+            font-size: 15px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            margin-top: auto;
+            padding: 35px 20px;
+
+            text-align: center;
+
+            background: #061010;
+
+            border-top: 1px solid rgba(255,255,255,.06);
+        }
+
+        .footer-brand {
+            font-size: 17px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #687878;
+            font-size: 12px;
+            margin-bottom: 18px;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .footer-links a {
+            color: #93a2a2;
+            font-size: 12px;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 750px) {
+
+            .nav {
+                min-height: 65px;
+                padding: 0 18px;
+            }
+
+            .brand {
+                font-size: 19px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: 610px;
+                padding: 55px 20px;
+            }
+
+            .logo {
+                width: 245px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .events-section {
+                padding: 60px 20px;
+            }
+
+            .events {
+                grid-template-columns: 1fr;
+            }
+
+            .event {
+                padding: 25px;
+            }
+
+            .community {
+                padding: 60px 20px;
+            }
+
+            .cta-section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="nav">
+
+            <div class="brand">
+                SPRINTERS
+            </div>
+
+            <nav class="nav-links">
+                <a href="#events">Events</a>
+                <a href="#community">Community</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-inner">
+
+                <img
+                    src="assets/images/sprinterslogo.png"
+                    alt="Sprinters"
+                    class="logo"
+                >
+
+                <span class="badge">
+                    Community & Events
+                </span>
+
+                <h1>
+                    Discover What's Happening
+                </h1>
+
+                <p class="hero-text">
+                    Stay informed about upcoming events, community activities,
+                    announcements and the latest updates.
+                </p>
+
+                <a
+                    href="YOUR_GENUINE_EVENT_CHANNEL_LINK"
+                    class="cta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Join Community
+                </a>
+
+                <p class="hero-note">
+                    Follow the official channel for event announcements.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- EVENTS -->
+
+        <section
+            class="events-section"
+            id="events"
+        >
+
+            <div class="section-heading">
+
+                <h2>
+                    Upcoming Events
+                </h2>
+
+                <p>
+                    Discover activities and community events.
+                </p>
+
+            </div>
+
+
+            <div class="events">
+
+                <div class="event">
+
+                    <span class="event-date">
+                        UPCOMING
+                    </span>
+
+                    <h3>
+                        Community Meetup
+                    </h3>
+
+                    <p>
+                        Connect with community members and
+                        stay informed about upcoming activities.
+                    </p>
+
+                </div>
+
+
+                <div class="event">
+
+                    <span class="event-date">
+                        UPCOMING
+                    </span>
+
+                    <h3>
+                        Community Updates
+                    </h3>
+
+                    <p>
+                        Get announcements and information
+                        about upcoming community activities.
+                    </p>
+
+                </div>
+
+
+                <div class="event">
+
+                    <span class="event-date">
+                        UPCOMING
+                    </span>
+
+                    <h3>
+                        Special Event
+                    </h3>
+
+                    <p>
+                        Check the official channel for
+                        confirmed dates and event information.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- COMMUNITY -->
+
+        <section
+            class="community"
+            id="community"
+        >
+
+            <div class="community-inner">
+
+                <h2>
+                    Our Community
+                </h2>
+
+                <p>
+                    Our community provides a simple place to
+                    discover announcements, activities and
+                    event information.
+                </p>
+
+                <p>
+                    Follow the official communication channel
+                    to receive new announcements as they become available.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA -->
+
+        <section
+            class="cta-section"
+            id="contact"
+        >
+
+            <h2>
+                Stay Connected
+            </h2>
+
+            <p>
+                Join the community to receive genuine event
+                announcements and activity updates.
+            </p>
+
+            <a
+                href="YOUR_GENUINE_EVENT_CHANNEL_LINK"
+                class="cta"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Join Community
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-brand">
+            SPRINTERS
+        </div>
+
+        <p>
+            © 2026 Sprinters. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
