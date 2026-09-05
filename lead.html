@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,9 +52,9 @@
       min-height: 100vh;
 
       background:
-        radial-gradient(circle at 10% 20%, rgba(255,255,255,.25), transparent 25%),
-        radial-gradient(circle at 90% 10%, rgba(255,255,255,.18), transparent 25%),
-        linear-gradient(135deg, #4f46e5, #7c3aed 45%, #db2777 100%);
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,.18), transparent 25%),
+        radial-gradient(circle at 90% 10%, rgba(255,255,255,.12), transparent 25%),
+        linear-gradient(135deg, #002f31, #00484a 45%, #001d1f 100%);
 
       color: #ffffff;
       overflow-x: hidden;
@@ -76,7 +75,7 @@
     body::before {
       width: 280px;
       height: 280px;
-      background: rgba(255, 255, 255, 0.08);
+      background: rgba(255, 215, 90, 0.07);
       top: -100px;
       left: -80px;
     }
@@ -84,7 +83,7 @@
     body::after {
       width: 350px;
       height: 350px;
-      background: rgba(255, 255, 255, 0.07);
+      background: rgba(255, 215, 90, 0.05);
       right: -120px;
       bottom: -120px;
     }
@@ -109,10 +108,25 @@
       align-items: center;
     }
 
-    /* LEFT SIDE */
+    /* =========================
+       LEFT SIDE
+    ========================= */
 
     .hero {
       padding: 20px;
+    }
+
+    /* SPRINTERS LOGO */
+
+    .hero-logo {
+      width: 100%;
+      max-width: 430px;
+      height: auto;
+      display: block;
+      margin-bottom: 28px;
+
+      filter:
+        drop-shadow(0 12px 25px rgba(0,0,0,.28));
     }
 
     .badge {
@@ -122,8 +136,8 @@
 
       padding: 9px 16px;
 
-      background: rgba(255,255,255,.14);
-      border: 1px solid rgba(255,255,255,.22);
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,215,90,.30);
       border-radius: 50px;
 
       backdrop-filter: blur(12px);
@@ -132,14 +146,16 @@
       font-weight: 600;
 
       margin-bottom: 22px;
+
+      color: #f5d263;
     }
 
     .badge-dot {
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: #4ade80;
-      box-shadow: 0 0 12px #4ade80;
+      background: #f5d263;
+      box-shadow: 0 0 12px rgba(245,210,99,.8);
     }
 
     .hero h1 {
@@ -154,7 +170,7 @@
       background: linear-gradient(
         90deg,
         #ffffff,
-        #fef08a,
+        #f7d76b,
         #ffffff
       );
 
@@ -169,7 +185,7 @@
       font-size: 18px;
       line-height: 1.6;
 
-      color: rgba(255,255,255,.84);
+      color: rgba(255,255,255,.82);
 
       margin-bottom: 30px;
     }
@@ -189,8 +205,8 @@
 
       padding: 11px 15px;
 
-      background: rgba(255,255,255,.11);
-      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,215,90,.16);
 
       border-radius: 12px;
 
@@ -204,10 +220,12 @@
       font-size: 17px;
     }
 
-    /* CARD */
+    /* =========================
+       CARD
+    ========================= */
 
     .card {
-      background: rgba(255,255,255,.96);
+      background: rgba(255,255,255,.97);
       color: #171717;
 
       border-radius: 26px;
@@ -215,7 +233,7 @@
       padding: 34px;
 
       box-shadow:
-        0 25px 70px rgba(0,0,0,.25),
+        0 25px 70px rgba(0,0,0,.30),
         0 5px 20px rgba(0,0,0,.12);
 
       position: relative;
@@ -235,9 +253,9 @@
       background:
         linear-gradient(
           90deg,
-          #4f46e5,
-          #9333ea,
-          #ec4899
+          #b88a20,
+          #f5d263,
+          #b88a20
         );
     }
 
@@ -246,33 +264,33 @@
       margin-bottom: 25px;
     }
 
-    .logo-circle {
-      width: 62px;
-      height: 62px;
+    /* ACTUAL SPRINTERS LOGO */
+
+    .logo-box {
+      width: 90px;
+      height: 70px;
 
       margin: 0 auto 15px;
-
-      border-radius: 18px;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
-      background:
-        linear-gradient(
-          135deg,
-          #4f46e5,
-          #9333ea,
-          #ec4899
-        );
+      overflow: hidden;
+      border-radius: 16px;
 
-      color: white;
-
-      font-size: 27px;
-      font-weight: 800;
+      background: #00383a;
 
       box-shadow:
-        0 10px 25px rgba(124,58,237,.3);
+        0 10px 25px rgba(0,0,0,.18);
+    }
+
+    .card-logo {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+      display: block;
     }
 
     .card h2 {
@@ -286,7 +304,9 @@
       line-height: 1.5;
     }
 
-    /* FORM */
+    /* =========================
+       FORM
+    ========================= */
 
     .input-group {
       margin-bottom: 14px;
@@ -329,10 +349,10 @@
     input:focus {
       background: white;
 
-      border-color: #7c3aed;
+      border-color: #c69b2d;
 
       box-shadow:
-        0 0 0 4px rgba(124,58,237,.08);
+        0 0 0 4px rgba(198,155,45,.10);
     }
 
     .continue-btn {
@@ -349,12 +369,12 @@
       background:
         linear-gradient(
           135deg,
-          #4f46e5,
-          #7c3aed,
-          #db2777
+          #b88920,
+          #f0c94f,
+          #b88920
         );
 
-      color: white;
+      color: #10292a;
 
       font-size: 15px;
       font-weight: 800;
@@ -362,7 +382,7 @@
       cursor: pointer;
 
       box-shadow:
-        0 10px 22px rgba(124,58,237,.28);
+        0 10px 22px rgba(184,137,32,.28);
 
       transition:
         transform .2s,
@@ -373,7 +393,7 @@
       transform: translateY(-2px);
 
       box-shadow:
-        0 14px 28px rgba(124,58,237,.35);
+        0 14px 28px rgba(184,137,32,.35);
     }
 
     .continue-btn:active {
@@ -392,7 +412,9 @@
       margin-top: 13px;
     }
 
-    /* SUCCESS */
+    /* =========================
+       SUCCESS
+    ========================= */
 
     .success {
       display: none;
@@ -468,7 +490,9 @@
       font-size: 19px;
     }
 
-    /* PRIVACY */
+    /* =========================
+       PRIVACY
+    ========================= */
 
     .privacy {
       text-align: center;
@@ -487,7 +511,9 @@
       font-weight: 600;
     }
 
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     .footer {
       position: absolute;
@@ -504,7 +530,9 @@
       color: rgba(255,255,255,.55);
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 800px) {
 
@@ -521,6 +549,12 @@
       .hero {
         text-align: center;
         padding: 10px;
+      }
+
+      .hero-logo {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto 24px;
       }
 
       .badge {
@@ -554,6 +588,10 @@
 
     @media (max-width: 420px) {
 
+      .hero-logo {
+        max-width: 330px;
+      }
+
       .hero h1 {
         font-size: 39px;
       }
@@ -572,6 +610,11 @@
       .card {
         padding: 25px 18px;
       }
+
+      .logo-box {
+        width: 82px;
+        height: 64px;
+      }
     }
   </style>
 </head>
@@ -582,9 +625,18 @@
 
     <div class="wrapper">
 
-      <!-- HERO SECTION -->
+      <!-- =========================
+           HERO SECTION
+      ========================== -->
 
       <section class="hero">
+
+        <!-- SPRINTERS LOGO -->
+        <img
+          src="sprinters-logo.png"
+          alt="Sprinters"
+          class="hero-logo"
+        >
 
         <div class="badge">
           <span class="badge-dot"></span>
@@ -628,14 +680,21 @@
       </section>
 
 
-      <!-- ACCESS CARD -->
+      <!-- =========================
+           ACCESS CARD
+      ========================== -->
 
       <section class="card">
 
         <div class="card-header">
 
-          <div class="logo-circle">
-            S
+          <!-- ACTUAL SPRINTERS LOGO -->
+          <div class="logo-box">
+            <img
+              src="sprinters-logo.png"
+              alt="Sprinters"
+              class="card-logo"
+            >
           </div>
 
           <h2>Stay Connected</h2>
