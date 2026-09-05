@@ -1,54 +1,763 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Sprinter Online | Official Access</title>
-  <!-- Global site tag (gtag.js) - Google Ads -->
+
+  <!-- Google Ads Conversion Tracking -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
     gtag('js', new Date());
     gtag('config', 'AW-CONVERSION_ID');
 
-    // THIS FUNCTION TRIGGERS THE LEAD CONVERSION
-    function trackLead() {
-      gtag('event', 'conversion', {'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'});
+    function trackLead(event) {
+      event.preventDefault();
+
+      gtag('event', 'conversion', {
+        'send_to': 'AW-CONVERSION_ID/CONVERSION_LABEL'
+      });
+
       document.getElementById('leadForm').style.display = 'none';
       document.getElementById('successView').style.display = 'block';
+
       return false;
     }
   </script>
+
   <style>
-    body { font-family: -apple-system, sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 20px; }
-    .card { background: white; padding: 30px; border-radius: 12px; width: 100%; max-width: 400px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center; }
-    input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
-    .btn { background: #0088cc; color: white; border: none; padding: 15px; width: 100%; border-radius: 6px; font-weight: bold; cursor: pointer; display: block; text-decoration: none; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+      min-height: 100vh;
+
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255,255,255,.25), transparent 25%),
+        radial-gradient(circle at 90% 10%, rgba(255,255,255,.18), transparent 25%),
+        linear-gradient(135deg, #4f46e5, #7c3aed 45%, #db2777 100%);
+
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    /* Decorative circles */
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(2px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::before {
+      width: 280px;
+      height: 280px;
+      background: rgba(255, 255, 255, 0.08);
+      top: -100px;
+      left: -80px;
+    }
+
+    body::after {
+      width: 350px;
+      height: 350px;
+      background: rgba(255, 255, 255, 0.07);
+      right: -120px;
+      bottom: -120px;
+    }
+
+    .page {
+      position: relative;
+      z-index: 1;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px 18px;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 1050px;
+
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 50px;
+      align-items: center;
+    }
+
+    /* LEFT SIDE */
+
+    .hero {
+      padding: 20px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      padding: 9px 16px;
+
+      background: rgba(255,255,255,.14);
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 50px;
+
+      backdrop-filter: blur(12px);
+
+      font-size: 13px;
+      font-weight: 600;
+
+      margin-bottom: 22px;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      box-shadow: 0 0 12px #4ade80;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 6vw, 70px);
+      line-height: .98;
+      letter-spacing: -2px;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .gradient-text {
+      background: linear-gradient(
+        90deg,
+        #ffffff,
+        #fef08a,
+        #ffffff
+      );
+
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-description {
+      max-width: 560px;
+
+      font-size: 18px;
+      line-height: 1.6;
+
+      color: rgba(255,255,255,.84);
+
+      margin-bottom: 30px;
+    }
+
+    /* FEATURE ROW */
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+
+      padding: 11px 15px;
+
+      background: rgba(255,255,255,.11);
+      border: 1px solid rgba(255,255,255,.16);
+
+      border-radius: 12px;
+
+      backdrop-filter: blur(10px);
+
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .feature-icon {
+      font-size: 17px;
+    }
+
+    /* CARD */
+
+    .card {
+      background: rgba(255,255,255,.96);
+      color: #171717;
+
+      border-radius: 26px;
+
+      padding: 34px;
+
+      box-shadow:
+        0 25px 70px rgba(0,0,0,.25),
+        0 5px 20px rgba(0,0,0,.12);
+
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      height: 6px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #4f46e5,
+          #9333ea,
+          #ec4899
+        );
+    }
+
+    .card-header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .logo-circle {
+      width: 62px;
+      height: 62px;
+
+      margin: 0 auto 15px;
+
+      border-radius: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background:
+        linear-gradient(
+          135deg,
+          #4f46e5,
+          #9333ea,
+          #ec4899
+        );
+
+      color: white;
+
+      font-size: 27px;
+      font-weight: 800;
+
+      box-shadow:
+        0 10px 25px rgba(124,58,237,.3);
+    }
+
+    .card h2 {
+      font-size: 25px;
+      margin-bottom: 7px;
+    }
+
+    .card-subtitle {
+      color: #737373;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    /* FORM */
+
+    .input-group {
+      margin-bottom: 14px;
+    }
+
+    .input-label {
+      display: block;
+
+      font-size: 12px;
+      font-weight: 700;
+
+      color: #525252;
+
+      margin-bottom: 6px;
+    }
+
+    .optional-label {
+      color: #a3a3a3;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+
+      border: 1px solid #e5e5e5;
+
+      background: #fafafa;
+
+      border-radius: 12px;
+
+      padding: 14px 15px;
+
+      font-size: 15px;
+
+      outline: none;
+
+      transition: .2s;
+    }
+
+    input:focus {
+      background: white;
+
+      border-color: #7c3aed;
+
+      box-shadow:
+        0 0 0 4px rgba(124,58,237,.08);
+    }
+
+    .continue-btn {
+      width: 100%;
+
+      border: none;
+
+      padding: 16px;
+
+      margin-top: 7px;
+
+      border-radius: 12px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #4f46e5,
+          #7c3aed,
+          #db2777
+        );
+
+      color: white;
+
+      font-size: 15px;
+      font-weight: 800;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 10px 22px rgba(124,58,237,.28);
+
+      transition:
+        transform .2s,
+        box-shadow .2s;
+    }
+
+    .continue-btn:hover {
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 14px 28px rgba(124,58,237,.35);
+    }
+
+    .continue-btn:active {
+      transform: translateY(0);
+    }
+
+    .small-note {
+      text-align: center;
+
+      color: #999;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+
+      margin-top: 13px;
+    }
+
+    /* SUCCESS */
+
+    .success {
+      display: none;
+      text-align: center;
+    }
+
+    .success-icon {
+      width: 68px;
+      height: 68px;
+
+      margin: 0 auto 17px;
+
+      border-radius: 50%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #dcfce7;
+      color: #16a34a;
+
+      font-size: 30px;
+      font-weight: 800;
+    }
+
+    .success h2 {
+      font-size: 27px;
+      margin-bottom: 8px;
+    }
+
+    .success p {
+      color: #737373;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      margin-bottom: 20px;
+    }
+
+    .telegram-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+
+      width: 100%;
+
+      padding: 15px;
+
+      border-radius: 12px;
+
+      text-decoration: none;
+
+      background: #229ed9;
+
+      color: white;
+
+      font-weight: 800;
+      font-size: 15px;
+
+      box-shadow:
+        0 9px 20px rgba(34,158,217,.25);
+
+      transition: .2s;
+    }
+
+    .telegram-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .telegram-icon {
+      font-size: 19px;
+    }
+
+    /* PRIVACY */
+
+    .privacy {
+      text-align: center;
+
+      margin-top: 21px;
+
+      color: #999;
+
+      font-size: 11px;
+
+      line-height: 1.5;
+    }
+
+    .privacy a {
+      color: #666;
+      font-weight: 600;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      position: absolute;
+
+      bottom: 15px;
+
+      left: 0;
+      right: 0;
+
+      text-align: center;
+
+      font-size: 11px;
+
+      color: rgba(255,255,255,.55);
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+
+      .page {
+        padding: 25px 16px 60px;
+      }
+
+      .wrapper {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        max-width: 500px;
+      }
+
+      .hero {
+        text-align: center;
+        padding: 10px;
+      }
+
+      .badge {
+        margin-bottom: 17px;
+      }
+
+      .hero h1 {
+        font-size: 46px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .features {
+        justify-content: center;
+      }
+
+      .card {
+        padding: 27px 22px;
+        border-radius: 22px;
+      }
+
+      .footer {
+        position: static;
+        margin-top: 20px;
+      }
+    }
+
+    @media (max-width: 420px) {
+
+      .hero h1 {
+        font-size: 39px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .feature {
+        justify-content: center;
+        font-size: 11px;
+        padding: 10px 7px;
+      }
+
+      .card {
+        padding: 25px 18px;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>Sprinter Online</h1>
 
-    <!-- STEP 1: LEAD FORM -->
-    <div id="leadForm">
-      <p>Enter your details to get the Telegram link.</p>
-      <form onsubmit="return trackLead();">
-        <input type="text" name="name" placeholder="Full Name" required>
-        <input type="tel" name="phone" placeholder="Phone Number" required>
-        <button type="submit" class="btn">GET TELEGRAM LINK</button>
-      </form>
+  <main class="page">
+
+    <div class="wrapper">
+
+      <!-- HERO SECTION -->
+
+      <section class="hero">
+
+        <div class="badge">
+          <span class="badge-dot"></span>
+          Official Access
+        </div>
+
+        <h1>
+          Discover<br>
+          <span class="gradient-text">Something New.</span>
+        </h1>
+
+        <p class="hero-description">
+          Connect with Sprinter Online and stay updated with
+          the latest information, announcements and community updates.
+        </p>
+
+        <div class="features">
+
+          <div class="feature">
+            <span class="feature-icon">⚡</span>
+            Quick Access
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon">🔔</span>
+            Latest Updates
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon">💬</span>
+            Community
+          </div>
+
+          <div class="feature">
+            <span class="feature-icon">📲</span>
+            Telegram
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ACCESS CARD -->
+
+      <section class="card">
+
+        <div class="card-header">
+
+          <div class="logo-circle">
+            S
+          </div>
+
+          <h2>Stay Connected</h2>
+
+          <p class="card-subtitle">
+            Enter your details if you'd like to provide them,
+            or continue directly.
+          </p>
+
+        </div>
+
+
+        <!-- FORM -->
+
+        <div id="leadForm">
+
+          <form onsubmit="return trackLead(event);">
+
+            <div class="input-group">
+
+              <label class="input-label">
+                Full Name
+                <span class="optional-label">(Optional)</span>
+              </label>
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+              >
+
+            </div>
+
+
+            <div class="input-group">
+
+              <label class="input-label">
+                Phone Number
+                <span class="optional-label">(Optional)</span>
+              </label>
+
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Enter your phone number"
+                autocomplete="tel"
+              >
+
+            </div>
+
+
+            <button
+              type="submit"
+              class="continue-btn"
+            >
+              CONTINUE →
+            </button>
+
+          </form>
+
+
+          <p class="small-note">
+            Name and phone number are optional.
+            You can continue without providing them.
+          </p>
+
+        </div>
+
+
+        <!-- SUCCESS -->
+
+        <div id="successView" class="success">
+
+          <div class="success-icon">
+            ✓
+          </div>
+
+          <h2>You're All Set!</h2>
+
+          <p>
+            Continue to our Telegram channel to stay
+            connected and receive the latest updates.
+          </p>
+
+          <a
+            href="https://t.me/sprinteronlineid"
+            class="telegram-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="telegram-icon">➤</span>
+            OPEN TELEGRAM
+          </a>
+
+        </div>
+
+
+        <!-- PRIVACY -->
+
+        <p class="privacy">
+          By continuing, you acknowledge our
+          <a href="/privacy.html">
+            Privacy Policy
+          </a>.
+        </p>
+
+      </section>
+
     </div>
 
-    <!-- STEP 2: SUCCESS VIEW -->
-    <div id="successView" style="display:none;">
-      <h2>Success!</h2>
-      <p>You're registered. Click below to join.</p>
-      <a href="https://t.me/sprinteronlineid" class="btn">OPEN TELEGRAM CHANNEL</a>
-    </div>
+  </main>
 
-    <p style="font-size:12px; color:#888; margin-top:20px;">By joining, you agree to our <a href="/privacy">Privacy Policy</a>.</p>
+
+  <div class="footer">
+    © 2026 Sprinter Online. All rights reserved.
   </div>
+
 </body>
 </html>
+```
+
+**Design changes:** colorful purple/pink gradient, modern glass-style hero, feature badges, premium card, responsive mobile layout, stronger CTA, optional fields clearly marked, and a clean Telegram transition.
+
+You can keep the **same `privacy.html`** from the previous version.
