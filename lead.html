@@ -7,337 +7,364 @@
 <title>Sprinters | Community Access</title>
 
 <style>
-*{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-    min-height:100vh;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
     background:
-        radial-gradient(circle at 15% 15%,rgba(245,210,99,.10),transparent 25%),
-        radial-gradient(circle at 85% 80%,rgba(245,210,99,.07),transparent 25%),
-        linear-gradient(135deg,#001f21 0%,#00383a 50%,#001416 100%);
-    color:#fff;
-    overflow-x:hidden;
+        radial-gradient(circle at 10% 10%, rgba(246, 201, 70, 0.10), transparent 28%),
+        radial-gradient(circle at 90% 85%, rgba(246, 201, 70, 0.08), transparent 28%),
+        linear-gradient(135deg, #00191c 0%, #00383b 50%, #001214 100%);
+    color: #ffffff;
 }
 
-.page{
-    min-height:100vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:30px 20px;
+/* PAGE */
+
+.page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 20px;
 }
 
-.container{
-    width:100%;
-    max-width:1050px;
-    display:grid;
-    grid-template-columns:1fr 420px;
-    gap:60px;
-    align-items:center;
+.container {
+    width: 100%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr 410px;
+    gap: 65px;
+    align-items: center;
 }
 
 /* LEFT SIDE */
 
-.hero{
-    padding:10px;
+.hero {
+    width: 100%;
 }
 
-.logo-wrap{
-    width:100%;
-    max-width:540px;
-    margin-bottom:30px;
+/* MAIN LOGO */
+
+.main-logo {
+    width: min(100%, 550px);
+    height: auto;
+    display: block;
+    margin-bottom: 30px;
+    object-fit: contain;
+    filter: drop-shadow(0 12px 25px rgba(0, 0, 0, 0.35));
 }
 
-.logo-wrap img{
-    width:100%;
-    height:auto;
-    display:block;
-    object-fit:contain;
-    filter:drop-shadow(0 12px 25px rgba(0,0,0,.35));
+/* BADGE */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 9px 16px;
+    border: 1px solid rgba(246, 210, 99, 0.35);
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50px;
+    color: #f5d263;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 22px;
 }
 
-.badge{
-    display:inline-flex;
-    align-items:center;
-    gap:8px;
-    padding:9px 16px;
-    border:1px solid rgba(245,210,99,.35);
-    background:rgba(255,255,255,.06);
-    border-radius:50px;
-    color:#f5d263;
-    font-size:12px;
-    font-weight:700;
-    margin-bottom:22px;
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #f5d263;
+    box-shadow: 0 0 12px rgba(245, 210, 99, 0.8);
 }
 
-.badge-dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#f5d263;
-    box-shadow:0 0 12px rgba(245,210,99,.8);
+/* HEADING */
+
+.hero h1 {
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1;
+    letter-spacing: -2px;
+    font-weight: 800;
+    margin-bottom: 20px;
 }
 
-.hero h1{
-    font-size:clamp(42px,6vw,68px);
-    line-height:1;
-    letter-spacing:-2px;
-    margin-bottom:20px;
-    font-weight:800;
+.gold {
+    color: #f5d263;
 }
 
-.gold{
-    background:linear-gradient(90deg,#fff,#f5d263,#fff);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-    background-clip:text;
+/* DESCRIPTION */
+
+.hero-description {
+    max-width: 560px;
+    color: rgba(255, 255, 255, 0.76);
+    font-size: 18px;
+    line-height: 1.65;
+    margin-bottom: 28px;
 }
 
-.hero p{
-    max-width:560px;
-    color:rgba(255,255,255,.78);
-    font-size:18px;
-    line-height:1.65;
-    margin-bottom:28px;
+/* FEATURES */
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.features{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.feature{
-    padding:11px 15px;
-    border-radius:12px;
-    border:1px solid rgba(245,210,99,.15);
-    background:rgba(255,255,255,.06);
-    font-size:12px;
-    font-weight:600;
+.feature {
+    padding: 11px 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(245, 210, 99, 0.18);
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 12px;
+    font-weight: 600;
 }
 
 /* CARD */
 
-.card{
-    background:#fff;
-    color:#171717;
-    border-radius:25px;
-    padding:35px;
+.card {
+    position: relative;
+    background: #ffffff;
+    color: #171717;
+    border-radius: 25px;
+    padding: 36px;
     box-shadow:
-        0 30px 70px rgba(0,0,0,.35),
-        0 5px 20px rgba(0,0,0,.15);
-    position:relative;
-    overflow:hidden;
+        0 30px 70px rgba(0, 0, 0, 0.42),
+        0 5px 20px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
 }
 
-.card:before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    height:5px;
-    background:linear-gradient(
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(
         90deg,
-        #a97815,
+        #a87512,
         #f5d263,
-        #a97815
+        #a87512
     );
 }
 
-.card-logo{
-    width:230px;
-    max-width:100%;
-    margin:0 auto 25px;
-    display:block;
-    object-fit:contain;
+/* CARD LOGO */
+
+.card-logo {
+    width: 245px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 25px;
+    object-fit: contain;
 }
 
-.card h2{
-    text-align:center;
-    font-size:27px;
-    margin-bottom:10px;
+/* CARD TEXT */
+
+.card h2 {
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.2;
+    margin-bottom: 10px;
 }
 
-.card-text{
-    text-align:center;
-    color:#707070;
-    font-size:14px;
-    line-height:1.6;
-    margin-bottom:25px;
+.card-text {
+    text-align: center;
+    color: #777777;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 26px;
 }
 
-/* BUTTON */
+/* TELEGRAM BUTTON */
 
-.telegram-btn{
-    width:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    padding:17px 20px;
-    border-radius:13px;
-    text-decoration:none;
+.telegram-btn {
+    width: 100%;
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 
-    background:linear-gradient(
+    border-radius: 13px;
+
+    background: linear-gradient(
         135deg,
-        #a97815,
+        #a87512,
         #f5d263,
-        #b3831e
+        #b7831d
     );
 
-    color:#102829;
-    font-size:15px;
-    font-weight:800;
+    color: #102526;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 800;
 
     box-shadow:
-        0 10px 25px rgba(184,137,32,.28);
+        0 10px 25px rgba(184, 137, 32, 0.28);
 
-    transition:.2s ease;
+    transition: all 0.2s ease;
 }
 
-.telegram-btn:hover{
-    transform:translateY(-2px);
+.telegram-btn:hover {
+    transform: translateY(-2px);
     box-shadow:
-        0 14px 30px rgba(184,137,32,.38);
+        0 15px 32px rgba(184, 137, 32, 0.38);
 }
 
-.telegram-icon{
-    font-size:19px;
+.telegram-icon {
+    font-size: 19px;
 }
 
-.note{
-    text-align:center;
-    color:#999;
-    font-size:11px;
-    line-height:1.5;
-    margin-top:15px;
+/* SMALL NOTE */
+
+.note {
+    text-align: center;
+    color: #999999;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 15px;
 }
 
-.privacy{
-    text-align:center;
-    color:#999;
-    font-size:11px;
-    margin-top:20px;
+/* PRIVACY */
+
+.privacy {
+    text-align: center;
+    color: #999999;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 20px;
 }
 
-.privacy a{
-    color:#666;
-    font-weight:600;
+.privacy a {
+    color: #666666;
+    font-weight: 600;
+    text-decoration: underline;
 }
 
-.footer{
-    text-align:center;
-    color:rgba(255,255,255,.45);
-    font-size:11px;
-    margin-top:20px;
+/* FOOTER */
+
+.footer {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+    padding: 0 20px 18px;
 }
 
 /* TABLET */
 
-@media(max-width:900px){
+@media (max-width: 900px) {
 
-    .container{
-        grid-template-columns:1fr;
-        max-width:600px;
-        gap:35px;
+    .container {
+        grid-template-columns: 1fr;
+        max-width: 620px;
+        gap: 40px;
     }
 
-    .hero{
-        text-align:center;
+    .hero {
+        text-align: center;
     }
 
-    .logo-wrap{
-        margin-left:auto;
-        margin-right:auto;
+    .main-logo {
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .hero p{
-        margin-left:auto;
-        margin-right:auto;
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .features{
-        justify-content:center;
+    .features {
+        justify-content: center;
     }
 }
 
 /* MOBILE */
 
-@media(max-width:600px){
+@media (max-width: 600px) {
 
-    .page{
-        padding:25px 15px;
+    .page {
+        padding: 25px 15px;
     }
 
-    .logo-wrap{
-        max-width:360px;
-        margin-bottom:22px;
+    .main-logo {
+        width: 100%;
+        max-width: 380px;
+        margin-bottom: 22px;
     }
 
-    .hero h1{
-        font-size:42px;
-        letter-spacing:-1.5px;
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: -1.5px;
     }
 
-    .hero p{
-        font-size:15px;
+    .hero-description {
+        font-size: 15px;
     }
 
-    .card{
-        padding:28px 22px;
-        border-radius:22px;
+    .card {
+        padding: 29px 22px;
+        border-radius: 22px;
     }
 
-    .card-logo{
-        width:200px;
-        margin-bottom:22px;
+    .card-logo {
+        width: 210px;
+        margin-bottom: 22px;
     }
 
-    .card h2{
-        font-size:24px;
+    .card h2 {
+        font-size: 24px;
     }
 }
 
-@media(max-width:420px){
+/* SMALL MOBILE */
 
-    .page{
-        padding:20px 12px;
+@media (max-width: 420px) {
+
+    .page {
+        padding: 20px 12px;
     }
 
-    .logo-wrap{
-        max-width:300px;
+    .main-logo {
+        max-width: 320px;
     }
 
-    .hero h1{
-        font-size:36px;
+    .hero h1 {
+        font-size: 36px;
     }
 
-    .hero p{
-        font-size:14px;
+    .hero-description {
+        font-size: 14px;
     }
 
-    .features{
-        display:grid;
-        grid-template-columns:1fr 1fr;
+    .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
-    .feature{
-        font-size:10px;
-        padding:10px 5px;
+    .feature {
+        font-size: 10px;
+        padding: 10px 5px;
     }
 
-    .card{
-        padding:25px 17px;
+    .card {
+        padding: 25px 17px;
     }
 
-    .card-logo{
-        width:170px;
+    .card-logo {
+        width: 180px;
     }
 }
 </style>
@@ -349,16 +376,16 @@ body{
 
     <div class="container">
 
-        <!-- LEFT CONTENT -->
+        <!-- LEFT SECTION -->
 
         <section class="hero">
 
-            <div class="logo-wrap">
-                <img
-                    src="sprinters-logo.png"
-                    alt="Sprinters"
-                >
-            </div>
+            <!-- YOUR SPRINTERS LOGO -->
+            <img
+                src="./sprinters-logo.png"
+                alt="Sprinters"
+                class="main-logo"
+            >
 
             <div class="badge">
                 <span class="badge-dot"></span>
@@ -370,7 +397,7 @@ body{
                 <span class="gold">Something New.</span>
             </h1>
 
-            <p>
+            <p class="hero-description">
                 Stay connected with Sprinters for the latest
                 updates, announcements and community information.
             </p>
@@ -398,12 +425,13 @@ body{
         </section>
 
 
-        <!-- ACCESS CARD -->
+        <!-- RIGHT SECTION -->
 
         <section class="card">
 
+            <!-- YOUR SPRINTERS LOGO -->
             <img
-                src="sprinters-logo.png"
+                src="./sprinters-logo.png"
                 alt="Sprinters"
                 class="card-logo"
             >
