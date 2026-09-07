@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | Sprinters</title>
+
+    <meta
+        name="description"
+        content="Privacy Policy for the Sprinters community website."
+    >
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: #222;
+
+            background:
+                radial-gradient(
+                    circle at 10% 10%,
+                    rgba(245, 210, 99, 0.10),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 90% 90%,
+                    rgba(245, 210, 99, 0.08),
+                    transparent 28%
+                ),
+                linear-gradient(
+                    135deg,
+                    #00191c 0%,
+                    #00383b 50%,
+                    #001214 100%
+                );
+        }
+
+        /* =========================
+           PAGE
+        ========================== */
+
+        .page {
+            min-height: 100vh;
+
+            padding: 50px 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 850px;
+
+            margin: 0 auto;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        .header {
+            text-align: center;
+
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            width: 300px;
+            max-width: 80%;
+
+            height: auto;
+
+            display: block;
+
+            margin: 0 auto 25px;
+
+            object-fit: contain;
+
+            filter:
+                drop-shadow(
+                    0 10px 20px rgba(0, 0, 0, 0.35)
+                );
+        }
+
+        .badge {
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 8px 15px;
+
+            border: 1px solid
+                rgba(245, 210, 99, 0.35);
+
+            background:
+                rgba(255, 255, 255, 0.05);
+
+            border-radius: 50px;
+
+            color: #f5d263;
+
+            font-size: 12px;
+
+            font-weight: 700;
+        }
+
+        .badge-dot {
+            width: 7px;
+            height: 7px;
+
+            border-radius: 50%;
+
+            background: #f5d263;
+
+            box-shadow:
+                0 0 10px
+                rgba(245, 210, 99, 0.8);
+        }
+
+        /* =========================
+           POLICY CARD
+        ========================== */
+
+        .policy-card {
+            position: relative;
+
+            background: #ffffff;
+
+            border-radius: 24px;
+
+            padding: 45px;
+
+            box-shadow:
+                0 30px 70px
+                rgba(0, 0, 0, 0.42);
+
+            overflow: hidden;
+        }
+
+        .policy-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 5px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #a87512,
+                    #f5d263,
+                    #a87512
+                );
+        }
+
+        .policy-card h1 {
+            font-size: 36px;
+
+            color: #171717;
+
+            text-align: center;
+
+            margin-bottom: 10px;
+        }
+
+        .updated {
+            text-align: center;
+
+            color: #888;
+
+            font-size: 12px;
+
+            margin-bottom: 35px;
+        }
+
+        /* =========================
+           CONTENT
+        ========================== */
+
+        .policy-card h2 {
+            color: #173a3d;
+
+            font-size: 20px;
+
+            margin-top: 30px;
+
+            margin-bottom: 10px;
+        }
+
+        .policy-card p {
+            color: #555;
+
+            font-size: 14px;
+
+            line-height: 1.75;
+
+            margin-bottom: 15px;
+        }
+
+        .policy-card ul {
+            margin: 10px 0 18px 20px;
+        }
+
+        .policy-card li {
+            color: #555;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            margin-bottom: 7px;
+        }
+
+        .highlight {
+            padding: 16px 18px;
+
+            margin: 20px 0;
+
+            border-left: 4px solid #d4ad3f;
+
+            background: #faf8ef;
+
+            border-radius: 8px;
+
+            color: #555;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+        }
+
+        /* =========================
+           BACK BUTTON
+        ========================== */
+
+        .back-btn {
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 48px;
+
+            padding: 12px 24px;
+
+            margin-top: 25px;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #a87512,
+                    #f5d263,
+                    #b7831d
+                );
+
+            color: #102526;
+
+            text-decoration: none;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+
+            box-shadow:
+                0 8px 20px
+                rgba(184, 137, 32, 0.25);
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+
+            box-shadow:
+                0 12px 25px
+                rgba(184, 137, 32, 0.35);
+        }
+
+        .button-wrapper {
+            text-align: center;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        .footer {
+            text-align: center;
+
+            color:
+                rgba(255, 255, 255, 0.45);
+
+            font-size: 11px;
+
+            margin-top: 25px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================== */
+
+        @media (max-width: 600px) {
+
+            .page {
+                padding: 25px 14px;
+            }
+
+            .logo {
+                width: 250px;
+            }
+
+            .policy-card {
+                padding: 30px 22px;
+
+                border-radius: 20px;
+            }
+
+            .policy-card h1 {
+                font-size: 28px;
+            }
+
+            .policy-card h2 {
+                font-size: 18px;
+            }
+
+            .policy-card p,
+            .policy-card li {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <main class="page">
+
+        <div class="container">
+
+            <!-- HEADER -->
+
+            <header class="header">
+
+                <img
+                    src="sprinters-logo.png"
+                    alt="Sprinters"
+                    class="logo"
+                >
+
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    Privacy &amp; Security
+                </div>
+
+            </header>
+
+
+            <!-- POLICY -->
+
+            <article class="policy-card">
+
+                <h1>
+                    Privacy Policy
+                </h1>
+
+                <div class="updated">
+                    Last updated: September 2026
+                </div>
+
+
+                <p>
+                    This Privacy Policy explains how information
+                    may be handled when you visit the Sprinters
+                    community website and use the services or
+                    links provided through this website.
+                </p>
+
+
+                <h2>
+                    1. Information We Collect
+                </h2>
+
+                <p>
+                    We aim to keep the information collected through
+                    this website to a minimum. We may receive
+                    information that you voluntarily provide when
+                    communicating with us or joining our community.
+                </p>
+
+                <p>
+                    We may also receive limited technical information
+                    automatically, such as browser type, device type,
+                    general usage information and basic website
+                    performance data.
+                </p>
+
+
+                <h2>
+                    2. How We Use Information
+                </h2>
+
+                <p>
+                    Information may be used to:
+                </p>
+
+                <ul>
+                    <li>
+                        Provide and maintain the website.
+                    </li>
+
+                    <li>
+                        Respond to communications and requests.
+                    </li>
+
+                    <li>
+                        Provide community updates and announcements.
+                    </li>
+
+                    <li>
+                        Improve website performance and user experience.
+                    </li>
+
+                    <li>
+                        Maintain website security.
+                    </li>
+                </ul>
+
+
+                <h2>
+                    3. Telegram
+                </h2>
+
+                <p>
+                    This website provides a link to a Telegram
+                    community. When you choose to join or interact
+                    with the Telegram community, your use of Telegram
+                    is also subject to Telegram's own terms and
+                    privacy practices.
+                </p>
+
+                <div class="highlight">
+                    We do not control Telegram's services or the
+                    information you choose to share through Telegram.
+                    Please review Telegram's privacy information before
+                    using its services.
+                </div>
+
+
+                <h2>
+                    4. Cookies
+                </h2>
+
+                <p>
+                    This website may use basic technologies such as
+                    cookies or similar tools where necessary for
+                    website functionality, security, performance or
+                    analytics.
+                </p>
+
+                <p>
+                    You can manage cookie preferences through your
+                    browser settings.
+                </p>
+
+
+                <h2>
+                    5. Third-Party Services
+                </h2>
+
+                <p>
+                    The website may contain links to third-party
+                    platforms or services. We are not responsible for
+                    the privacy practices, content or security of
+                    third-party websites.
+                </p>
+
+                <p>
+                    We recommend reviewing the privacy policies of
+                    third-party services before providing them with
+                    personal information.
+                </p>
+
+
+                <h2>
+                    6. Data Security
+                </h2>
+
+                <p>
+                    Reasonable measures may be used to protect
+                    information handled through the website.
+                    However, no method of transmission or electronic
+                    storage can be guaranteed to be completely secure.
+                </p>
+
+
+                <h2>
+                    7. Children's Privacy
+                </h2>
+
+                <p>
+                    This website is not intended to knowingly collect
+                    personal information from children. If you believe
+                    that information has been submitted by a child,
+                    please contact us so that appropriate action can
+                    be taken.
+                </p>
+
+
+                <h2>
+                    8. Changes to This Policy
+                </h2>
+
+                <p>
+                    This Privacy Policy may be updated from time to
+                    time. Any changes will be posted on this page with
+                    an updated revision date.
+                </p>
+
+
+                <h2>
+                    9. Contact
+                </h2>
+
+                <p>
+                    If you have questions regarding this Privacy Policy
+                    or the handling of information through this website,
+                    you may contact us through the official community
+                    channel.
+                </p>
+
+
+                <div class="button-wrapper">
+
+                    <a
+                        href="lead.html"
+                        class="back-btn"
+                    >
+                        ← BACK TO COMMUNITY
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- FOOTER -->
+
+            <footer class="footer">
+                © 2026 Sprinters. All rights reserved.
+            </footer>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
