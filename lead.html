@@ -2,13 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Sprinters | Community Access</title>
 
-    <meta name="description" content="Stay connected with the official Sprinters community for the latest updates and announcements.">
+    <meta
+        name="description"
+        content="Stay connected with Sprinters for the latest updates, announcements and community information."
+    >
+
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
     <style>
+
+        /* ==============================
+           RESET
+        ============================== */
+
         * {
             margin: 0;
             padding: 0;
@@ -21,49 +38,77 @@
 
         body {
             min-height: 100vh;
-            font-family: Arial, Helvetica, sans-serif;
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            color: #ffffff;
+
             background:
                 radial-gradient(
-                    circle at 10% 10%,
-                    rgba(245, 210, 99, 0.10),
+                    circle at 8% 12%,
+                    rgba(245, 210, 99, 0.12),
                     transparent 28%
                 ),
+
                 radial-gradient(
-                    circle at 90% 85%,
+                    circle at 92% 85%,
                     rgba(245, 210, 99, 0.08),
-                    transparent 28%
+                    transparent 30%
                 ),
+
                 linear-gradient(
                     135deg,
-                    #00191c 0%,
-                    #00383b 50%,
-                    #001214 100%
+                    #001518 0%,
+                    #00373a 50%,
+                    #001113 100%
                 );
-            color: #ffffff;
         }
 
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+
+        /* ==============================
+           MAIN PAGE
+        ============================== */
+
         .page {
-            min-height: calc(100vh - 45px);
+            min-height: calc(100vh - 55px);
+
             display: flex;
+
             align-items: center;
+
             justify-content: center;
-            padding: 40px 20px;
+
+            padding:
+                45px 20px;
         }
 
         .container {
             width: 100%;
-            max-width: 1100px;
+
+            max-width: 1120px;
 
             display: grid;
-            grid-template-columns: minmax(0, 1fr) 410px;
 
-            gap: 60px;
+            grid-template-columns:
+                minmax(0, 1fr)
+                410px;
+
             align-items: center;
+
+            gap: 65px;
         }
 
-        /* =========================
-           LEFT SIDE
-        ========================== */
+
+        /* ==============================
+           LEFT / HERO
+        ============================== */
 
         .hero {
             width: 100%;
@@ -71,128 +116,195 @@
 
         .main-logo {
             width: 100%;
+
             max-width: 560px;
+
             height: auto;
 
             display: block;
 
-            margin: 0 0 32px 0;
-
             object-fit: contain;
 
+            margin:
+                0 0 32px 0;
+
             filter:
-                drop-shadow(0 12px 25px rgba(0, 0, 0, 0.40));
+                drop-shadow(
+                    0 15px 30px
+                    rgba(0, 0, 0, 0.45)
+                );
         }
+
+
+        /* ==============================
+           BADGE
+        ============================== */
 
         .badge {
             display: inline-flex;
+
             align-items: center;
+
             gap: 9px;
 
-            padding: 9px 16px;
-
-            border: 1px solid rgba(245, 210, 99, 0.35);
-
-            background: rgba(255, 255, 255, 0.05);
+            padding:
+                9px 16px;
 
             border-radius: 50px;
+
+            border:
+                1px solid
+                rgba(245, 210, 99, 0.35);
+
+            background:
+                rgba(255, 255, 255, 0.05);
 
             color: #f5d263;
 
             font-size: 12px;
+
             font-weight: 700;
+
+            letter-spacing: 0.2px;
 
             margin-bottom: 22px;
         }
 
         .badge-dot {
             width: 8px;
+
             height: 8px;
+
+            flex-shrink: 0;
 
             border-radius: 50%;
 
             background: #f5d263;
 
             box-shadow:
-                0 0 12px rgba(245, 210, 99, 0.85);
+                0 0 12px
+                rgba(245, 210, 99, 0.85);
         }
 
+
+        /* ==============================
+           HERO TITLE
+        ============================== */
+
         .hero h1 {
-            font-size: clamp(42px, 6vw, 68px);
+            font-size:
+                clamp(
+                    44px,
+                    6vw,
+                    70px
+                );
 
-            line-height: 1;
+            line-height: 0.98;
 
-            letter-spacing: -2px;
+            letter-spacing: -2.5px;
 
             font-weight: 800;
 
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .gold {
             color: #f5d263;
         }
 
-        .hero-description {
-            max-width: 560px;
 
-            color: rgba(255, 255, 255, 0.76);
+        /* ==============================
+           HERO DESCRIPTION
+        ============================== */
+
+        .hero-description {
+            max-width: 570px;
+
+            color:
+                rgba(255, 255, 255, 0.76);
 
             font-size: 18px;
 
-            line-height: 1.65;
+            line-height: 1.7;
 
-            margin-bottom: 28px;
+            margin-bottom: 30px;
         }
 
-        /* =========================
-           FEATURE TAGS
-        ========================== */
+
+        /* ==============================
+           FEATURE CHIPS
+        ============================== */
 
         .features {
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 10px;
         }
 
         .feature {
-            padding: 11px 15px;
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 40px;
+
+            padding:
+                10px 15px;
 
             border-radius: 12px;
 
-            border: 1px solid rgba(245, 210, 99, 0.18);
+            border:
+                1px solid
+                rgba(245, 210, 99, 0.18);
 
-            background: rgba(255, 255, 255, 0.05);
+            background:
+                rgba(255, 255, 255, 0.05);
 
-            color: rgba(255, 255, 255, 0.90);
+            color:
+                rgba(255, 255, 255, 0.90);
 
             font-size: 12px;
 
             font-weight: 600;
+
+            white-space: nowrap;
         }
 
-        /* =========================
+
+        /* ==============================
            RIGHT CARD
-        ========================== */
+        ============================== */
 
         .card {
             position: relative;
+
+            width: 100%;
 
             background: #ffffff;
 
             color: #171717;
 
-            border-radius: 25px;
+            border-radius: 26px;
 
-            padding: 36px;
-
-            box-shadow:
-                0 30px 70px rgba(0, 0, 0, 0.42),
-                0 5px 20px rgba(0, 0, 0, 0.18);
+            padding:
+                38px 36px 35px;
 
             overflow: hidden;
+
+            box-shadow:
+                0 30px 75px
+                rgba(0, 0, 0, 0.45),
+
+                0 8px 25px
+                rgba(0, 0, 0, 0.18);
         }
+
+
+        /* GOLD TOP LINE */
 
         .card::before {
             content: "";
@@ -200,9 +312,11 @@
             position: absolute;
 
             top: 0;
+
             left: 0;
 
             width: 100%;
+
             height: 5px;
 
             background:
@@ -214,18 +328,30 @@
                 );
         }
 
+
+        /* ==============================
+           CARD LOGO
+        ============================== */
+
         .card-logo {
             width: 240px;
+
             max-width: 100%;
 
             height: auto;
 
             display: block;
 
-            margin: 0 auto 25px;
-
             object-fit: contain;
+
+            margin:
+                0 auto 27px;
         }
+
+
+        /* ==============================
+           CARD TITLE
+        ============================== */
 
         .card h2 {
             text-align: center;
@@ -234,8 +360,17 @@
 
             line-height: 1.2;
 
-            margin-bottom: 10px;
+            font-weight: 800;
+
+            color: #171717;
+
+            margin-bottom: 11px;
         }
+
+
+        /* ==============================
+           CARD DESCRIPTION
+        ============================== */
 
         .card-text {
             text-align: center;
@@ -244,19 +379,20 @@
 
             font-size: 14px;
 
-            line-height: 1.6;
+            line-height: 1.65;
 
-            margin-bottom: 26px;
+            margin-bottom: 27px;
         }
 
-        /* =========================
+
+        /* ==============================
            TELEGRAM BUTTON
-        ========================== */
+        ============================== */
 
         .telegram-btn {
             width: 100%;
 
-            min-height: 55px;
+            min-height: 56px;
 
             display: flex;
 
@@ -266,28 +402,32 @@
 
             gap: 10px;
 
-            padding: 15px 20px;
+            padding:
+                15px 20px;
 
             border-radius: 13px;
 
             background:
                 linear-gradient(
                     135deg,
-                    #a87512,
-                    #f5d263,
-                    #b7831d
+                    #a87512 0%,
+                    #f5d263 50%,
+                    #b7831d 100%
                 );
 
             color: #102526;
 
             text-decoration: none;
 
-            font-size: 15px;
+            font-size: 14px;
 
             font-weight: 800;
 
+            letter-spacing: 0.2px;
+
             box-shadow:
-                0 10px 25px rgba(184, 137, 32, 0.28);
+                0 10px 25px
+                rgba(184, 137, 32, 0.28);
 
             transition:
                 transform 0.2s ease,
@@ -295,19 +435,37 @@
         }
 
         .telegram-btn:hover {
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
             box-shadow:
-                0 15px 32px rgba(184, 137, 32, 0.38);
+                0 15px 32px
+                rgba(184, 137, 32, 0.38);
         }
 
         .telegram-btn:active {
-            transform: translateY(0);
+            transform:
+                translateY(0);
         }
 
         .telegram-icon {
-            font-size: 19px;
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 21px;
+
+            height: 21px;
+
+            font-size: 18px;
         }
+
+
+        /* ==============================
+           CARD NOTE
+        ============================== */
 
         .note {
             text-align: center;
@@ -320,6 +478,11 @@
 
             margin-top: 15px;
         }
+
+
+        /* ==============================
+           PRIVACY
+        ============================== */
 
         .privacy {
             text-align: center;
@@ -339,34 +502,46 @@
             font-weight: 600;
 
             text-decoration: underline;
+
+            text-underline-offset: 2px;
         }
 
-        /* =========================
+        .privacy a:hover {
+            color: #a87512;
+        }
+
+
+        /* ==============================
            FOOTER
-        ========================== */
+        ============================== */
 
         .footer {
+            width: 100%;
+
             text-align: center;
 
-            color: rgba(255, 255, 255, 0.40);
+            color:
+                rgba(255, 255, 255, 0.42);
 
             font-size: 11px;
 
-            padding: 0 20px 18px;
+            padding:
+                0 20px 18px;
         }
 
-        /* =========================
-           TABLET
-        ========================== */
 
-        @media (max-width: 900px) {
+        /* ==============================
+           TABLET
+        ============================== */
+
+        @media (max-width: 950px) {
 
             .container {
                 grid-template-columns: 1fr;
 
-                max-width: 620px;
+                max-width: 650px;
 
-                gap: 40px;
+                gap: 45px;
             }
 
             .hero {
@@ -375,80 +550,141 @@
 
             .main-logo {
                 margin-left: auto;
+
                 margin-right: auto;
             }
 
             .hero-description {
                 margin-left: auto;
+
                 margin-right: auto;
             }
 
             .features {
                 justify-content: center;
             }
+
+            .card {
+                max-width: 430px;
+
+                margin-left: auto;
+
+                margin-right: auto;
+            }
         }
 
-        /* =========================
+
+        /* ==============================
            MOBILE
-        ========================== */
+        ============================== */
 
         @media (max-width: 600px) {
 
             .page {
-                padding: 25px 15px;
+                min-height: auto;
+
+                padding:
+                    30px 15px 35px;
+            }
+
+            .container {
+                gap: 35px;
             }
 
             .main-logo {
-                width: 100%;
-
-                max-width: 380px;
+                max-width: 390px;
 
                 margin-bottom: 25px;
             }
 
-            .hero h1 {
-                font-size: 42px;
+            .badge {
+                font-size: 11px;
 
-                letter-spacing: -1.5px;
+                padding:
+                    8px 14px;
+
+                margin-bottom: 19px;
+            }
+
+            .hero h1 {
+                font-size: 43px;
+
+                letter-spacing: -1.8px;
+
+                margin-bottom: 18px;
             }
 
             .hero-description {
                 font-size: 15px;
+
+                line-height: 1.6;
+
+                margin-bottom: 24px;
+            }
+
+            .features {
+                gap: 8px;
+            }
+
+            .feature {
+                min-height: 38px;
+
+                padding:
+                    9px 12px;
+
+                font-size: 11px;
             }
 
             .card {
-                padding: 29px 22px;
+                padding:
+                    31px 23px 28px;
 
                 border-radius: 22px;
             }
 
             .card-logo {
-                width: 210px;
+                width: 215px;
 
-                margin-bottom: 22px;
+                margin-bottom: 23px;
             }
 
             .card h2 {
-                font-size: 24px;
+                font-size: 25px;
+            }
+
+            .card-text {
+                font-size: 13px;
+
+                margin-bottom: 23px;
+            }
+
+            .telegram-btn {
+                min-height: 54px;
+
+                font-size: 13px;
             }
         }
 
-        /* =========================
-           SMALL MOBILE
-        ========================== */
+
+        /* ==============================
+           SMALL PHONES
+        ============================== */
 
         @media (max-width: 420px) {
 
             .page {
-                padding: 20px 12px;
+                padding:
+                    22px 12px 30px;
             }
 
             .main-logo {
-                max-width: 320px;
+                max-width: 330px;
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 37px;
+
+                letter-spacing: -1.5px;
             }
 
             .hero-description {
@@ -458,59 +694,109 @@
             .features {
                 display: grid;
 
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns:
+                    1fr 1fr;
+
+                width: 100%;
             }
 
             .feature {
+                width: 100%;
+
                 font-size: 10px;
 
-                padding: 10px 5px;
+                padding:
+                    9px 5px;
             }
 
             .card {
-                padding: 25px 17px;
+                padding:
+                    27px 17px 25px;
             }
 
             .card-logo {
-                width: 180px;
+                width: 185px;
+            }
+
+            .card h2 {
+                font-size: 23px;
+            }
+
+            .telegram-btn {
+                font-size: 12px;
+
+                padding:
+                    14px 10px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-    <div class="page">
+
+    <!-- =================================
+         MAIN PAGE
+    ================================== -->
+
+    <main class="page">
 
         <div class="container">
 
-            <!-- =========================
-                 LEFT CONTENT
-            ========================== -->
+
+            <!-- =================================
+                 LEFT HERO SECTION
+            ================================== -->
 
             <section class="hero">
 
-                <!-- NEW LOGO -->
+
+                <!-- LOGO -->
+
                 <img
-                    src="assets/images/sprinters-logo.png"
+                    src="sprinters-logo.png"
                     alt="Sprinters"
                     class="main-logo"
                 >
 
+
+                <!-- BADGE -->
+
                 <div class="badge">
+
                     <span class="badge-dot"></span>
+
                     Official Community
+
                 </div>
 
+
+                <!-- TITLE -->
+
                 <h1>
+
                     Discover<br>
-                    <span class="gold">Something New.</span>
+
+                    <span class="gold">
+                        Something New.
+                    </span>
+
                 </h1>
 
+
+                <!-- DESCRIPTION -->
+
                 <p class="hero-description">
-                    Stay connected with Sprinters for the latest updates,
-                    announcements and community information.
+
+                    Stay connected with Sprinters for the latest
+                    updates, announcements and community information.
+
                 </p>
+
+
+                <!-- FEATURES -->
 
                 <div class="features">
 
@@ -535,27 +821,41 @@
             </section>
 
 
-            <!-- =========================
+
+            <!-- =================================
                  RIGHT CARD
-            ========================== -->
+            ================================== -->
 
             <section class="card">
 
-                <!-- NEW LOGO -->
+
+                <!-- LOGO -->
+
                 <img
-                    src="assets/images/sprinters-logo.png"
+                    src="sprinters-logo.png"
                     alt="Sprinters"
                     class="card-logo"
                 >
+
+
+                <!-- TITLE -->
 
                 <h2>
                     Stay Connected
                 </h2>
 
+
+                <!-- DESCRIPTION -->
+
                 <p class="card-text">
+
                     Join the official community to receive
                     the latest updates and announcements.
+
                 </p>
+
+
+                <!-- TELEGRAM CTA -->
 
                 <a
                     href="https://t.me/sprinteronlineid"
@@ -572,31 +872,46 @@
 
                 </a>
 
+
+                <!-- NOTE -->
+
                 <p class="note">
+
                     You will be redirected to Telegram.
+
                 </p>
 
+
+                <!-- PRIVACY -->
+
                 <p class="privacy">
+
                     By continuing, you acknowledge our
-                    <a href="/privacy.html">
+
+                    <a href="privacy.html">
                         Privacy Policy
                     </a>.
+
                 </p>
 
             </section>
 
         </div>
 
-    </div>
+    </main>
 
 
-    <!-- =========================
+
+    <!-- =================================
          FOOTER
-    ========================== -->
+    ================================== -->
 
-    <div class="footer">
+    <footer class="footer">
+
         © 2026 Sprinters. All rights reserved.
-    </div>
+
+    </footer>
+
 
 </body>
 </html>
