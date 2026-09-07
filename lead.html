@@ -2,11 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Sprinters | Community Access</title>
 
@@ -15,16 +11,13 @@
         content="Stay connected with Sprinters for the latest updates, announcements and community information."
     >
 
-    <meta
-        name="robots"
-        content="index, follow"
-    >
+    <meta name="robots" content="index, follow">
 
     <style>
 
-        /* ==============================
+        /* =========================================
            RESET
-        ============================== */
+        ========================================= */
 
         * {
             margin: 0;
@@ -44,27 +37,27 @@
                 Helvetica,
                 sans-serif;
 
-            color: #ffffff;
+            color: #f5f2e9;
 
             background:
                 radial-gradient(
-                    circle at 8% 12%,
-                    rgba(245, 210, 99, 0.12),
+                    circle at 15% 10%,
+                    rgba(214, 171, 70, 0.10),
                     transparent 28%
                 ),
-
                 radial-gradient(
-                    circle at 92% 85%,
-                    rgba(245, 210, 99, 0.08),
+                    circle at 90% 85%,
+                    rgba(214, 171, 70, 0.08),
                     transparent 30%
                 ),
-
                 linear-gradient(
                     135deg,
-                    #001518 0%,
-                    #00373a 50%,
-                    #001113 100%
+                    #070707 0%,
+                    #121212 48%,
+                    #050505 100%
                 );
+
+            overflow-x: hidden;
         }
 
         a {
@@ -72,9 +65,54 @@
         }
 
 
-        /* ==============================
+        /* =========================================
+           BACKGROUND DECORATION
+        ========================================= */
+
+        body::before {
+            content: "";
+
+            position: fixed;
+
+            width: 450px;
+            height: 450px;
+
+            top: -250px;
+            right: -180px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(212, 174, 78, 0.08);
+
+            pointer-events: none;
+        }
+
+        body::after {
+            content: "";
+
+            position: fixed;
+
+            width: 350px;
+            height: 350px;
+
+            bottom: -220px;
+            left: -150px;
+
+            border-radius: 50%;
+
+            border:
+                1px solid
+                rgba(212, 174, 78, 0.07);
+
+            pointer-events: none;
+        }
+
+
+        /* =========================================
            MAIN PAGE
-        ============================== */
+        ========================================= */
 
         .page {
             min-height: calc(100vh - 55px);
@@ -86,7 +124,7 @@
             justify-content: center;
 
             padding:
-                45px 20px;
+                50px 20px;
         }
 
         .container {
@@ -106,9 +144,9 @@
         }
 
 
-        /* ==============================
-           LEFT / HERO
-        ============================== */
+        /* =========================================
+           LEFT HERO
+        ========================================= */
 
         .hero {
             width: 100%;
@@ -117,7 +155,7 @@
         .main-logo {
             width: 100%;
 
-            max-width: 560px;
+            max-width: 570px;
 
             height: auto;
 
@@ -126,19 +164,19 @@
             object-fit: contain;
 
             margin:
-                0 0 32px 0;
+                0 0 34px 0;
 
             filter:
                 drop-shadow(
                     0 15px 30px
-                    rgba(0, 0, 0, 0.45)
+                    rgba(0, 0, 0, 0.75)
                 );
         }
 
 
-        /* ==============================
+        /* =========================================
            BADGE
-        ============================== */
+        ========================================= */
 
         .badge {
             display: inline-flex;
@@ -154,20 +192,24 @@
 
             border:
                 1px solid
-                rgba(245, 210, 99, 0.35);
+                rgba(212, 174, 78, 0.35);
 
             background:
-                rgba(255, 255, 255, 0.05);
+                rgba(212, 174, 78, 0.055);
 
-            color: #f5d263;
+            color: #dcb75a;
 
             font-size: 12px;
 
             font-weight: 700;
 
-            letter-spacing: 0.2px;
+            letter-spacing: 0.3px;
 
             margin-bottom: 22px;
+
+            box-shadow:
+                inset 0 0 15px
+                rgba(212, 174, 78, 0.025);
         }
 
         .badge-dot {
@@ -179,17 +221,18 @@
 
             border-radius: 50%;
 
-            background: #f5d263;
+            background:
+                #dcb75a;
 
             box-shadow:
                 0 0 12px
-                rgba(245, 210, 99, 0.85);
+                rgba(220, 183, 90, 0.85);
         }
 
 
-        /* ==============================
+        /* =========================================
            HERO TITLE
-        ============================== */
+        ========================================= */
 
         .hero h1 {
             font-size:
@@ -201,27 +244,43 @@
 
             line-height: 0.98;
 
-            letter-spacing: -2.5px;
+            letter-spacing: -2.7px;
 
             font-weight: 800;
+
+            color: #f5f2e9;
 
             margin-bottom: 22px;
         }
 
         .gold {
-            color: #f5d263;
+            color: #dcb75a;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #a97922,
+                    #f3d778,
+                    #c99b38
+                );
+
+            -webkit-background-clip: text;
+
+            background-clip: text;
+
+            -webkit-text-fill-color: transparent;
         }
 
 
-        /* ==============================
-           HERO DESCRIPTION
-        ============================== */
+        /* =========================================
+           DESCRIPTION
+        ========================================= */
 
         .hero-description {
             max-width: 570px;
 
             color:
-                rgba(255, 255, 255, 0.76);
+                rgba(245, 242, 233, 0.66);
 
             font-size: 18px;
 
@@ -231,9 +290,9 @@
         }
 
 
-        /* ==============================
+        /* =========================================
            FEATURE CHIPS
-        ============================== */
+        ========================================= */
 
         .features {
             display: flex;
@@ -255,52 +314,73 @@
             padding:
                 10px 15px;
 
-            border-radius: 12px;
+            border-radius: 10px;
 
             border:
                 1px solid
-                rgba(245, 210, 99, 0.18);
+                rgba(212, 174, 78, 0.16);
 
             background:
-                rgba(255, 255, 255, 0.05);
+                rgba(255, 255, 255, 0.025);
 
             color:
-                rgba(255, 255, 255, 0.90);
+                rgba(245, 242, 233, 0.78);
 
             font-size: 12px;
 
             font-weight: 600;
 
             white-space: nowrap;
+
+            transition:
+                border-color 0.2s ease,
+                background 0.2s ease;
+        }
+
+        .feature:hover {
+            border-color:
+                rgba(212, 174, 78, 0.35);
+
+            background:
+                rgba(212, 174, 78, 0.06);
         }
 
 
-        /* ==============================
+        /* =========================================
            RIGHT CARD
-        ============================== */
+        ========================================= */
 
         .card {
             position: relative;
 
             width: 100%;
 
-            background: #ffffff;
+            background:
+                linear-gradient(
+                    145deg,
+                    #1c1c1c,
+                    #101010
+                );
 
-            color: #171717;
+            color: #f5f2e9;
 
-            border-radius: 26px;
+            border-radius: 25px;
 
             padding:
                 38px 36px 35px;
 
             overflow: hidden;
 
+            border:
+                1px solid
+                rgba(212, 174, 78, 0.20);
+
             box-shadow:
                 0 30px 75px
-                rgba(0, 0, 0, 0.45),
+                rgba(0, 0, 0, 0.70),
 
-                0 8px 25px
-                rgba(0, 0, 0, 0.18);
+                0 0 50px
+                rgba(212, 174, 78, 0.035);
         }
 
 
@@ -312,26 +392,24 @@
             position: absolute;
 
             top: 0;
-
             left: 0;
 
             width: 100%;
-
-            height: 5px;
+            height: 4px;
 
             background:
                 linear-gradient(
                     90deg,
-                    #a87512,
-                    #f5d263,
-                    #a87512
+                    #8d6419,
+                    #f3d778,
+                    #a97922
                 );
         }
 
 
-        /* ==============================
+        /* =========================================
            CARD LOGO
-        ============================== */
+        ========================================= */
 
         .card-logo {
             width: 240px;
@@ -345,13 +423,19 @@
             object-fit: contain;
 
             margin:
-                0 auto 27px;
+                0 auto 28px;
+
+            filter:
+                drop-shadow(
+                    0 8px 15px
+                    rgba(0, 0, 0, 0.65)
+                );
         }
 
 
-        /* ==============================
+        /* =========================================
            CARD TITLE
-        ============================== */
+        ========================================= */
 
         .card h2 {
             text-align: center;
@@ -362,20 +446,21 @@
 
             font-weight: 800;
 
-            color: #171717;
+            color: #f7f3e8;
 
             margin-bottom: 11px;
         }
 
 
-        /* ==============================
+        /* =========================================
            CARD DESCRIPTION
-        ============================== */
+        ========================================= */
 
         .card-text {
             text-align: center;
 
-            color: #777777;
+            color:
+                rgba(245, 242, 233, 0.58);
 
             font-size: 14px;
 
@@ -385,9 +470,9 @@
         }
 
 
-        /* ==============================
+        /* =========================================
            TELEGRAM BUTTON
-        ============================== */
+        ========================================= */
 
         .telegram-btn {
             width: 100%;
@@ -405,17 +490,17 @@
             padding:
                 15px 20px;
 
-            border-radius: 13px;
+            border-radius: 12px;
 
             background:
                 linear-gradient(
                     135deg,
-                    #a87512 0%,
-                    #f5d263 50%,
-                    #b7831d 100%
+                    #9a6e1e 0%,
+                    #e9ca65 48%,
+                    #b38328 100%
                 );
 
-            color: #102526;
+            color: #17130a;
 
             text-decoration: none;
 
@@ -423,24 +508,38 @@
 
             font-weight: 800;
 
-            letter-spacing: 0.2px;
+            letter-spacing: 0.3px;
+
+            border:
+                1px solid
+                rgba(255, 226, 133, 0.35);
 
             box-shadow:
-                0 10px 25px
-                rgba(184, 137, 32, 0.28);
+                0 12px 30px
+                rgba(0, 0, 0, 0.40),
+
+                0 5px 18px
+                rgba(194, 149, 45, 0.18);
 
             transition:
                 transform 0.2s ease,
-                box-shadow 0.2s ease;
+                box-shadow 0.2s ease,
+                filter 0.2s ease;
         }
 
         .telegram-btn:hover {
             transform:
                 translateY(-2px);
 
+            filter:
+                brightness(1.06);
+
             box-shadow:
-                0 15px 32px
-                rgba(184, 137, 32, 0.38);
+                0 16px 35px
+                rgba(0, 0, 0, 0.50),
+
+                0 8px 22px
+                rgba(194, 149, 45, 0.25);
         }
 
         .telegram-btn:active {
@@ -463,14 +562,15 @@
         }
 
 
-        /* ==============================
+        /* =========================================
            CARD NOTE
-        ============================== */
+        ========================================= */
 
         .note {
             text-align: center;
 
-            color: #999999;
+            color:
+                rgba(245, 242, 233, 0.38);
 
             font-size: 11px;
 
@@ -480,14 +580,15 @@
         }
 
 
-        /* ==============================
+        /* =========================================
            PRIVACY
-        ============================== */
+        ========================================= */
 
         .privacy {
             text-align: center;
 
-            color: #999999;
+            color:
+                rgba(245, 242, 233, 0.35);
 
             font-size: 11px;
 
@@ -497,23 +598,28 @@
         }
 
         .privacy a {
-            color: #666666;
+            color:
+                rgba(220, 183, 90, 0.72);
 
             font-weight: 600;
 
             text-decoration: underline;
 
             text-underline-offset: 2px;
+
+            transition:
+                color 0.2s ease;
         }
 
         .privacy a:hover {
-            color: #a87512;
+            color:
+                #f0d475;
         }
 
 
-        /* ==============================
+        /* =========================================
            FOOTER
-        ============================== */
+        ========================================= */
 
         .footer {
             width: 100%;
@@ -521,7 +627,7 @@
             text-align: center;
 
             color:
-                rgba(255, 255, 255, 0.42);
+                rgba(245, 242, 233, 0.28);
 
             font-size: 11px;
 
@@ -530,11 +636,15 @@
         }
 
 
-        /* ==============================
+        /* =========================================
            TABLET
-        ============================== */
+        ========================================= */
 
         @media (max-width: 950px) {
+
+            .page {
+                padding-top: 40px;
+            }
 
             .container {
                 grid-template-columns: 1fr;
@@ -574,9 +684,9 @@
         }
 
 
-        /* ==============================
+        /* =========================================
            MOBILE
-        ============================== */
+        ========================================= */
 
         @media (max-width: 600px) {
 
@@ -666,9 +776,9 @@
         }
 
 
-        /* ==============================
+        /* =========================================
            SMALL PHONES
-        ============================== */
+        ========================================= */
 
         @media (max-width: 420px) {
 
@@ -737,23 +847,23 @@
 <body>
 
 
-    <!-- =================================
-         MAIN PAGE
-    ================================== -->
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
 
     <main class="page">
 
         <div class="container">
 
 
-            <!-- =================================
-                 LEFT HERO SECTION
-            ================================== -->
+            <!-- =====================================
+                 HERO SECTION
+            ====================================== -->
 
             <section class="hero">
 
 
-                <!-- LOGO -->
+                <!-- SPRINTERS LOGO -->
 
                 <img
                     src="sprinters-logo.png"
@@ -762,7 +872,7 @@
                 >
 
 
-                <!-- BADGE -->
+                <!-- COMMUNITY BADGE -->
 
                 <div class="badge">
 
@@ -773,7 +883,7 @@
                 </div>
 
 
-                <!-- TITLE -->
+                <!-- MAIN HEADING -->
 
                 <h1>
 
@@ -796,7 +906,7 @@
                 </p>
 
 
-                <!-- FEATURES -->
+                <!-- FEATURE ITEMS -->
 
                 <div class="features">
 
@@ -822,14 +932,14 @@
 
 
 
-            <!-- =================================
-                 RIGHT CARD
-            ================================== -->
+            <!-- =====================================
+                 COMMUNITY CARD
+            ====================================== -->
 
             <section class="card">
 
 
-                <!-- LOGO -->
+                <!-- SPRINTERS LOGO -->
 
                 <img
                     src="sprinters-logo.png"
@@ -838,14 +948,14 @@
                 >
 
 
-                <!-- TITLE -->
+                <!-- CARD HEADING -->
 
                 <h2>
                     Stay Connected
                 </h2>
 
 
-                <!-- DESCRIPTION -->
+                <!-- CARD DESCRIPTION -->
 
                 <p class="card-text">
 
@@ -873,7 +983,7 @@
                 </a>
 
 
-                <!-- NOTE -->
+                <!-- REDIRECTION NOTE -->
 
                 <p class="note">
 
@@ -882,7 +992,7 @@
                 </p>
 
 
-                <!-- PRIVACY -->
+                <!-- PRIVACY POLICY -->
 
                 <p class="privacy">
 
@@ -902,9 +1012,9 @@
 
 
 
-    <!-- =================================
+    <!-- =========================================
          FOOTER
-    ================================== -->
+    ========================================== -->
 
     <footer class="footer">
 
