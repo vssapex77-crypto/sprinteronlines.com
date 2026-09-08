@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprinters | Community Registration</title>
+  <meta name="description" content="Register your interest in the Sprinters community and receive community updates and announcements.">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18427504141"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18427504141');
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #f5f2e9;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(214,171,70,.10), transparent 28%),
+        radial-gradient(circle at 90% 85%, rgba(214,171,70,.08), transparent 30%),
+        linear-gradient(135deg,#070707 0%,#121212 48%,#050505 100%);
+    }
+    .page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+    .container {
+      width: 100%;
+      max-width: 1050px;
+      display: grid;
+      grid-template-columns: 1fr 430px;
+      gap: 70px;
+      align-items: center;
+    }
+    .hero { padding: 10px; }
+    .logo {
+      width: 250px;
+      max-width: 80%;
+      height: auto;
+      display: block;
+      margin-bottom: 28px;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 25px rgba(0,0,0,.65));
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 15px;
+      border: 1px solid rgba(212,174,78,.35);
+      border-radius: 50px;
+      background: rgba(212,174,78,.055);
+      color: #dcb75a;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #dcb75a;
+    }
+    h1 {
+      font-size: clamp(42px,6vw,68px);
+      line-height: 1;
+      letter-spacing: -2.5px;
+      margin-bottom: 22px;
+    }
+    .gold {
+      color: #dcb75a;
+      background: linear-gradient(100deg,#a97922,#f3d778,#c99b38);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .intro {
+      max-width: 560px;
+      color: rgba(245,242,233,.67);
+      font-size: 17px;
+      line-height: 1.7;
+      margin-bottom: 26px;
+    }
+    .points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+    .point {
+      padding: 10px 14px;
+      border: 1px solid rgba(212,174,78,.16);
+      border-radius: 10px;
+      background: rgba(255,255,255,.025);
+      color: rgba(245,242,233,.75);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .card {
+      position: relative;
+      padding: 35px;
+      border-radius: 24px;
+      background: linear-gradient(145deg,#1c1c1c,#101010);
+      border: 1px solid rgba(212,174,78,.20);
+      box-shadow: 0 30px 75px rgba(0,0,0,.70);
+    }
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 4px;
+      border-radius: 24px 24px 0 0;
+      background: linear-gradient(90deg,#8d6419,#f3d778,#a97922);
+    }
+    .card h2 {
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    .card-text {
+      text-align: center;
+      color: rgba(245,242,233,.56);
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+    label {
+      display: block;
+      color: rgba(245,242,233,.82);
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0 0 7px;
+    }
+    input {
+      width: 100%;
+      height: 50px;
+      padding: 0 14px;
+      margin-bottom: 17px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px;
+      background: rgba(255,255,255,.055);
+      color: #fff;
+      font-size: 14px;
+      outline: none;
+    }
+    input:focus {
+      border-color: rgba(220,183,90,.65);
+    }
+    input::placeholder { color: rgba(255,255,255,.35); }
+    .submit {
+      width: 100%;
+      min-height: 54px;
+      border: 0;
+      border-radius: 11px;
+      cursor: pointer;
+      background: linear-gradient(135deg,#9a6e1e,#e9ca65 48%,#b38328);
+      color: #17130a;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .submit:hover { filter: brightness(1.06); }
+    .privacy {
+      text-align: center;
+      margin-top: 17px;
+      color: rgba(245,242,233,.38);
+      font-size: 10px;
+      line-height: 1.5;
+    }
+    .privacy a { color: rgba(220,183,90,.72); }
+    .success {
+      display: none;
+      text-align: center;
+      padding: 20px 0 5px;
+    }
+    .success h3 { font-size: 24px; margin-bottom: 9px; }
+    .success p {
+      color: rgba(245,242,233,.6);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    @media (max-width: 900px) {
+      .container { grid-template-columns: 1fr; max-width: 600px; gap: 35px; }
+      .hero { text-align: center; }
+      .logo { margin-left: auto; margin-right: auto; }
+      .intro { margin-left: auto; margin-right: auto; }
+      .points { justify-content: center; }
+    }
+    @media (max-width: 500px) {
+      .page { padding: 25px 14px; }
+      .card { padding: 28px 20px; }
+      h1 { font-size: 40px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="container">
+
+      <section class="hero">
+        <img src="sprinters-logo.png" alt="Sprinters" class="logo">
+
+        <div class="badge">
+          <span class="dot"></span>
+          Official Community
+        </div>
+
+        <h1>
+          Stay<br>
+          <span class="gold">Connected.</span>
+        </h1>
+
+        <p class="intro">
+          Register your interest in the Sprinters community and receive
+          relevant updates, announcements and community information.
+        </p>
+
+        <div class="points">
+          <div class="point">Quick Registration</div>
+          <div class="point">Community Updates</div>
+          <div class="point">Latest Announcements</div>
+          <div class="point">Information &amp; News</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Register Your Interest</h2>
+        <p class="card-text">
+          Enter your details below to register for community information
+          and updates.
+        </p>
+
+        <form id="leadForm" action="#" method="post">
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="name" required>
+
+          <label for="email">Email Address</label>
+          <input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required>
+
+          <label for="phone">Phone Number <span style="font-weight:400;opacity:.55;">(optional)</span></label>
+          <input id="phone" name="phone" type="tel" placeholder="Enter your phone number" autocomplete="tel">
+
+          <button class="submit" type="submit">SUBMIT DETAILS</button>
+        </form>
+
+        <div class="success" id="successMessage">
+          <h3>Thank You</h3>
+          <p>Your details have been received. We appreciate your interest in the Sprinters community.</p>
+        </div>
+
+        <p class="privacy">
+          By submitting this form, you acknowledge our
+          <a href="privacy.html">Privacy Policy</a>.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <script>
+    document.getElementById('leadForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      /*
+       * IMPORTANT:
+       * Connect this form to your real lead-processing endpoint/CRM.
+       * The demo success message below does NOT store submitted data.
+       *
+       * After your backend confirms a successful submission, fire the
+       * Google Ads conversion event there or immediately after confirmed
+       * success:
+       *
+       * gtag('event', 'conversion', {
+       *   'send_to': 'AW-18427504141/CONVERSION_LABEL'
+       * });
+       */
+
+      document.getElementById('leadForm').style.display = 'none';
+      document.getElementById('successMessage').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
