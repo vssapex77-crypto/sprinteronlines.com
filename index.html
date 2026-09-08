@@ -1,423 +1,1703 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta charset="UTF-8">
+<title>Sprinter Community</title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Join the Sprinter community for updates, announcements, conversations and community support.">
 
-    <meta name="description"
-        content="Sprinter Online - Official Online Platform">
+<meta name="theme-color" content="#080808">
 
-    <meta name="robots"
-        content="index, follow">
+<!-- ================= META PIXEL ================= -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-    <link rel="canonical"
-        href="https://www.sprinteronlines.com/">
+fbq('init', '2233774397380123');
+fbq('init', '1691412755282810');
+fbq('track', 'PageView');
+</script>
+<!-- =============================================== -->
 
-    <title>Sprinter Online</title>
+<style>
 
+:root{
+    --bg:#070707;
+    --bg2:#0e0e0e;
+    --gold:#f7d56b;
+    --gold2:#dcae35;
+    --cream:#fff4c9;
+    --muted:#b7b7b7;
+    --white:#ffffff;
+    --line:rgba(247,213,107,.20);
+    --card:rgba(255,255,255,.055);
+    --shadow:0 25px 80px rgba(0,0,0,.55);
+}
 
-    <!-- =====================================================
-         CSS
-    ====================================================== -->
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-    <link rel="stylesheet"
-        href="assets/css/style.css">
+html{
+    scroll-behavior:smooth;
+}
 
+body{
+    font-family:Inter,Arial,sans-serif;
+    color:var(--white);
 
-    <!-- =====================================================
-         META PIXEL
-         PIXEL 1: 1732688021370064
-         PIXEL 2: 1691412755282810
-    ====================================================== -->
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(247,213,107,.13),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 85% 28%,
+            rgba(255,174,0,.08),
+            transparent 25%
+        ),
+        linear-gradient(
+            145deg,
+            #050505,
+            #111 50%,
+            #050505
+        );
 
-    <script>
+    min-height:100vh;
+    overflow-x:hidden;
+}
 
-    !function(f,b,e,v,n,t,s)
-    {
-        if(f.fbq)return;
+body:before{
+    content:"";
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    opacity:.25;
 
-        n=f.fbq=function()
-        {
-            n.callMethod ?
-            n.callMethod.apply(n,arguments) :
-            n.queue.push(arguments)
-        };
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025) 1px,
+            transparent 1px
+        );
 
-        if(!f._fbq)f._fbq=n;
+    background-size:42px 42px;
 
-        n.push=n;
-        n.loaded=!0;
-        n.version='2.0';
-        n.queue=[];
+    mask-image:
+        linear-gradient(
+            to bottom,
+            #000,
+            transparent 75%
+        );
+}
 
-        t=b.createElement(e);
-        t.async=!0;
-        t.src=v;
-
-        s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s);
-
-    }(
-        window,
-        document,
-        'script',
-        'https://connect.facebook.net/en_US/fbevents.js'
-    );
-
-
-    /* ==========================================
-       PIXEL 1
-    ========================================== */
-
-    fbq('init', '1732688021370064');
-
-
-    /* ==========================================
-       PIXEL 2
-    ========================================== */
-
-    fbq('init', '1691412755282810');
-
-
-    /* ==========================================
-       PAGE VIEW
-    ========================================== */
-
-    fbq('track', 'PageView');
-
-    </script>
-
-
-    <!-- =====================================================
-         NOSCRIPT - PIXEL 1
-    ====================================================== -->
-
-    <noscript>
-
-        <img
-            height="1"
-            width="1"
-            style="display:none"
-            src="https://www.facebook.com/tr?id=1732688021370064&ev=PageView&noscript=1"
-            alt=""
-        >
-
-    </noscript>
-
-
-    <!-- =====================================================
-         NOSCRIPT - PIXEL 2
-    ====================================================== -->
-
-    <noscript>
-
-        <img
-            height="1"
-            width="1"
-            style="display:none"
-            src="https://www.facebook.com/tr?id=1691412755282810&ev=PageView&noscript=1"
-            alt=""
-        >
-
-    </noscript>
+.wrap{
+    width:min(1160px,92%);
+    margin:auto;
+}
 
 
-    <!-- =====================================================
-         MICROSOFT CLARITY
-         Replace YOUR_CLARITY_ID with your actual Clarity ID
-    ====================================================== -->
+/* ================= NAVIGATION ================= */
 
-    <!--
-    <script type="text/javascript">
+nav{
+    position:sticky;
+    top:0;
+    z-index:50;
 
-    (function(c,l,a,r,i,t,y){
+    background:rgba(5,5,5,.78);
 
-        c[a]=c[a]||function(){
-            (c[a].q=c[a].q||[]).push(arguments)
-        };
+    backdrop-filter:blur(18px);
 
-        t=l.createElement(r);
-        t.async=1;
-        t.src="https://www.clarity.ms/tag/"+i;
+    border-bottom:
+        1px solid
+        rgba(247,213,107,.13);
+}
 
-        y=l.getElementsByTagName(r)[0];
-        y.parentNode.insertBefore(t,y);
+.nav-inner{
+    height:76px;
 
-    })(window, document, "clarity", "script", "YOUR_CLARITY_ID");
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-    </script>
-    -->
+    gap:20px;
+}
 
+.brand img{
+    width:145px;
+    height:auto;
+    display:block;
+}
+
+.nav-link{
+    color:#ddd;
+
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:700;
+
+    padding:11px 18px;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:999px;
+
+    transition:.25s;
+}
+
+.nav-link:hover{
+    color:#080808;
+    background:var(--gold);
+    transform:translateY(-2px);
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+
+    padding:
+        95px
+        0
+        80px;
+
+    text-align:center;
+}
+
+.hero:after{
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+    top:0;
+
+    width:420px;
+    height:420px;
+
+    transform:translateX(-50%);
+
+    background:
+        rgba(247,213,107,.08);
+
+    filter:blur(80px);
+
+    border-radius:50%;
+
+    z-index:-1;
+}
+
+.eyebrow{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px 14px;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:999px;
+
+    color:var(--cream);
+
+    background:
+        rgba(247,213,107,.06);
+
+    font-size:12px;
+
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+}
+
+.dot{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    box-shadow:
+        0 0 14px
+        var(--gold);
+}
+
+h1{
+    font-size:
+        clamp(
+            44px,
+            8vw,
+            88px
+        );
+
+    line-height:.95;
+
+    letter-spacing:-4px;
+
+    margin:
+        28px
+        auto
+        22px;
+
+    max-width:950px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #fff6c9 5%,
+            #f7d56b 42%,
+            #c99428 75%,
+            #fff0a9
+        );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+.hero p{
+    max-width:690px;
+
+    margin:auto;
+
+    color:#c8c8c8;
+
+    font-size:18px;
+
+    line-height:1.7;
+}
+
+.actions{
+    display:flex;
+
+    justify-content:center;
+
+    gap:14px;
+
+    flex-wrap:wrap;
+
+    margin-top:34px;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.btn{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    min-height:52px;
+
+    padding:
+        0
+        25px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    font-weight:900;
+
+    font-size:15px;
+
+    transition:.25s;
+
+    border:
+        1px solid
+        transparent;
+}
+
+.btn-primary{
+    color:#0b0b0b;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0a3,
+            #f7d56b 48%,
+            #c99127
+        );
+
+    box-shadow:
+        0 12px 35px
+        rgba(247,213,107,.18);
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 16px 45px
+        rgba(247,213,107,.28);
+}
+
+.btn-secondary{
+    color:#eee;
+
+    background:
+        rgba(255,255,255,.05);
+
+    border-color:
+        rgba(255,255,255,.13);
+}
+
+.btn-secondary:hover{
+    border-color:var(--gold);
+
+    color:var(--gold);
+
+    transform:translateY(-3px);
+}
+
+
+/* ================= OFFER ================= */
+
+.offer-section{
+    padding:
+        20px
+        0
+        35px;
+}
+
+.offer-card{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:
+        34px
+        38px;
+
+    border-radius:28px;
+
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            rgba(247,213,107,.24),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #171208,
+            #0b0b0b 58%,
+            #191306
+        );
+
+    border:
+        1px solid
+        rgba(247,213,107,.38);
+
+    box-shadow:
+        0 22px 65px
+        rgba(0,0,0,.42);
+}
+
+.offer-card:before{
+    content:"10%";
+
+    position:absolute;
+
+    right:-15px;
+    bottom:-55px;
+
+    font-size:145px;
+
+    line-height:1;
+
+    font-weight:1000;
+
+    letter-spacing:-9px;
+
+    color:
+        rgba(247,213,107,.045);
+
+    pointer-events:none;
+}
+
+.offer-badge{
+    display:inline-block;
+
+    padding:
+        7px
+        12px;
+
+    border-radius:999px;
+
+    color:#0b0b0b;
+
+    background:var(--gold);
+
+    font-size:10px;
+
+    font-weight:950;
+
+    letter-spacing:1.5px;
+
+    margin-bottom:20px;
+}
+
+.offer-content{
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:30px;
+
+    position:relative;
+
+    z-index:1;
+}
+
+.offer-kicker{
+    color:var(--gold);
+
+    font-size:11px;
+
+    font-weight:900;
+
+    letter-spacing:1.7px;
+}
+
+.offer-card h2{
+    margin:
+        8px
+        0
+        8px;
+
+    font-size:
+        clamp(
+            30px,
+            4vw,
+            46px
+        );
+}
+
+.offer-card p{
+    color:#bcbcbc;
+
+    line-height:1.65;
+
+    max-width:610px;
+
+    font-size:14px;
+}
+
+.offer-note{
+    position:relative;
+
+    z-index:1;
+
+    color:#777;
+
+    font-size:11px;
+
+    margin-top:20px;
+}
+
+
+/* ================= STATS ================= */
+
+.strip{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    gap:1px;
+
+    background:var(--line);
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+}
+
+.stat{
+    background:
+        rgba(12,12,12,.92);
+
+    padding:
+        25px
+        18px;
+
+    text-align:center;
+}
+
+.stat strong{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:25px;
+}
+
+.stat span{
+    display:block;
+
+    color:#aaa;
+
+    font-size:12px;
+
+    margin-top:6px;
+}
+
+
+/* ================= SECTIONS ================= */
+
+section{
+    padding:
+        95px
+        0;
+}
+
+.section-head{
+    text-align:center;
+
+    max-width:720px;
+
+    margin:
+        0
+        auto
+        48px;
+}
+
+.section-head .mini{
+    color:var(--gold);
+
+    font-size:12px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+h2{
+    font-size:
+        clamp(
+            32px,
+            5vw,
+            54px
+        );
+
+    letter-spacing:-2px;
+
+    margin:
+        12px
+        0;
+}
+
+.section-head p{
+    color:#aaa;
+
+    line-height:1.7;
+}
+
+
+/* ================= CARDS ================= */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:18px;
+}
+
+.card{
+    position:relative;
+
+    overflow:hidden;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(247,213,107,.15);
+
+    transition:.3s;
+
+    min-height:220px;
+}
+
+.card:before{
+    content:"";
+
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    right:-55px;
+    top:-55px;
+
+    border-radius:50%;
+
+    background:
+        rgba(247,213,107,.10);
+
+    filter:blur(5px);
+}
+
+.card:hover{
+    transform:translateY(-7px);
+
+    border-color:
+        rgba(247,213,107,.48);
+
+    box-shadow:
+        0 18px 55px
+        rgba(0,0,0,.35);
+}
+
+.icon{
+    width:52px;
+    height:52px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(247,213,107,.2),
+            rgba(247,213,107,.04)
+        );
+
+    border:
+        1px solid
+        rgba(247,213,107,.25);
+
+    font-size:23px;
+
+    margin-bottom:23px;
+}
+
+.card h3{
+    font-size:21px;
+
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#aaa;
+
+    line-height:1.65;
+
+    font-size:14px;
+}
+
+
+/* ================= COMMUNITY ================= */
+
+.community{
+    position:relative;
+
+    padding:
+        65px
+        55px;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(247,213,107,.20),
+            transparent 25%
+        ),
+        linear-gradient(
+            120deg,
+            #14110a,
+            #0c0c0c 55%,
+            #17120a
+        );
+
+    border:
+        1px solid
+        rgba(247,213,107,.25);
+
+    box-shadow:var(--shadow);
+}
+
+.community:after{
+    content:"SPRINTER";
+
+    position:absolute;
+
+    right:-20px;
+    bottom:-45px;
+
+    font-size:110px;
+
+    font-weight:1000;
+
+    letter-spacing:-6px;
+
+    color:
+        rgba(247,213,107,.035);
+
+    pointer-events:none;
+}
+
+.community h2{
+    max-width:680px;
+}
+
+.community p{
+    max-width:650px;
+
+    color:#bcbcbc;
+
+    line-height:1.75;
+}
+
+.points{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    gap:13px;
+
+    margin:
+        28px
+        0;
+}
+
+.point{
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    color:#ddd;
+
+    font-size:14px;
+}
+
+.check{
+    width:24px;
+    height:24px;
+
+    border-radius:50%;
+
+    display:grid;
+
+    place-items:center;
+
+    color:#111;
+
+    background:var(--gold);
+
+    font-size:13px;
+
+    font-weight:900;
+
+    flex:none;
+}
+
+
+/* ================= STEPS ================= */
+
+.steps{
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+
+    gap:18px;
+}
+
+.step{
+    padding:28px;
+
+    border-radius:22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.09);
+
+    background:
+        rgba(255,255,255,.035);
+}
+
+.num{
+    font-size:13px;
+
+    color:#111;
+
+    background:var(--gold);
+
+    font-weight:900;
+
+    border-radius:999px;
+
+    padding:
+        6px
+        10px;
+
+    display:inline-block;
+}
+
+.step h3{
+    margin:
+        22px
+        0
+        9px;
+}
+
+.step p{
+    color:#999;
+
+    line-height:1.65;
+
+    font-size:14px;
+}
+
+
+/* ================= FINAL CTA ================= */
+
+.final{
+    text-align:center;
+
+    padding:
+        90px
+        0
+        105px;
+}
+
+.final p{
+    color:#aaa;
+
+    margin:
+        0
+        auto
+        27px;
+
+    max-width:600px;
+
+    line-height:1.7;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer{
+    border-top:
+        1px solid
+        rgba(255,255,255,.08);
+
+    padding:
+        28px
+        0;
+
+    color:#777;
+
+    font-size:12px;
+
+    text-align:center;
+}
+
+footer b{
+    color:#d8b84f;
+}
+
+
+/* ================= TABLET ================= */
+
+@media(max-width:800px){
+
+    .strip,
+    .cards,
+    .steps{
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+    .community{
+        padding:
+            42px
+            28px;
+    }
+
+    .offer-content{
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .community:after{
+        font-size:65px;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width:560px){
+
+    .nav-inner{
+        height:66px;
+    }
+
+    .brand img{
+        width:120px;
+    }
+
+    .nav-link{
+        font-size:12px;
+
+        padding:
+            9px
+            13px;
+    }
+
+    .hero{
+        padding:
+            70px
+            0
+            55px;
+    }
+
+    h1{
+        letter-spacing:-2.5px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .strip,
+    .cards,
+    .steps,
+    .points{
+        grid-template-columns:1fr;
+    }
+
+    section{
+        padding:
+            70px
+            0;
+    }
+
+    .community{
+        padding:
+            34px
+            22px;
+    }
+
+    .offer-card{
+        padding:
+            28px
+            22px;
+    }
+
+    .btn{
+        width:100%;
+    }
+
+    .actions{
+        flex-direction:column;
+    }
+}
+
+</style>
 </head>
 
 
 <body>
 
 
-    <!-- =====================================================
-         MAIN PAGE
-    ====================================================== -->
+<!-- ================= NAV ================= -->
 
-    <main class="home">
+<nav>
 
-        <div class="home-inner">
+<div class="wrap nav-inner">
 
+<a class="brand" href="#">
+<img
+src="sprinter-logo.png"
+alt="Sprinter">
+</a>
 
-            <!-- =================================================
-                 HEADER
-            ================================================== -->
+<a
+class="nav-link"
+href="https://t.me/sprinteruserid"
+target="_blank"
+rel="noopener"
+onclick="fbq('track','Lead')">
 
-            <div class="head-title">
+Join Community
 
-                <h1>
-                    SPRINTER
-                </h1>
+</a>
 
-            </div>
+</div>
 
+</nav>
 
-            <!-- =================================================
-                 TELEGRAM LOGO
-            ================================================== -->
 
-            <div class="logo-box">
+<!-- ================= MAIN ================= -->
 
-                <a
-                    href="https://t.me/sprinteruserid"
-                    id="telegram-logo-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Continue to Telegram"
-                >
+<main>
 
-                    <img
-                        src="assets/images/sprinterslogo.png"
-                        alt="Sprinter Online"
-                    >
 
-                </a>
+<!-- HERO -->
 
-            </div>
+<section class="hero">
 
+<div class="wrap">
 
-            <!-- =================================================
-                 TOP CONTENT
-            ================================================== -->
+<div class="eyebrow">
 
-            <div class="top-content-bx">
+<span class="dot"></span>
 
-                <h2>
-                    ASIA'S LARGEST BOOK
-                </h2>
+The Sprinter Community
 
-                <h3>
-                    Sprinter Online Book
-                </h3>
+</div>
 
-                <p>
-                    Since 2010
-                </p>
 
-            </div>
+<h1>
 
+CONNECT. EXPLORE.<br>
 
-            <!-- =================================================
-                 CENTER CONTENT
-            ================================================== -->
+STAY UPDATED.
 
-            <div class="center-part">
+</h1>
 
-                <h2>
-                    Official Online Gaming Platform
-                </h2>
 
-                <p>
-                    Experience a smooth and simple online platform.
-                </p>
+<p>
 
-            </div>
+Welcome to the Sprinter community — a simple place
+to stay connected, discover announcements,
+follow the latest updates and be part of the conversation.
 
+</p>
 
-            <!-- =================================================
-                 BOTTOM CONTENT
-            ================================================== -->
 
-            <div class="btm-part">
+<div class="actions">
 
+<a
+class="btn btn-primary"
+href="https://t.me/sprinteruserid"
+target="_blank"
+rel="noopener"
+onclick="fbq('track','Lead')">
 
-                <div class="btm-content-bx">
+✈ Join the Community
 
+</a>
 
-                    <!-- =========================================
-                         INFORMATION BOX 1
-                    ========================================== -->
 
-                    <div class="info-box">
+<a
+class="btn btn-secondary"
+href="#why">
 
-                        <div class="info-icon">
-                            ✓
-                        </div>
+Explore Community
 
-                        <div class="info-text">
+</a>
 
-                            <strong>
-                                24 Hour Refill
-                            </strong>
+</div>
 
-                            <span>
-                                Available
-                            </span>
+</div>
 
-                        </div>
+</section>
 
-                    </div>
 
 
-                    <!-- =========================================
-                         INFORMATION BOX 2
-                    ========================================== -->
+<!-- ================= OFFER ================= -->
 
-                    <div class="info-box">
+<section class="offer-section">
 
-                        <div class="info-icon">
-                            ✓
-                        </div>
+<div class="wrap">
 
-                        <div class="info-text">
+<div class="offer-card">
 
-                            <strong>
-                                24 Hour Return
-                            </strong>
 
-                            <span>
-                                Support
-                            </span>
+<div class="offer-badge">
 
-                        </div>
+NEW JOINER WELCOME
 
-                    </div>
+</div>
 
 
-                </div>
+<div class="offer-content">
 
 
-                <!-- =================================================
-                     SPORTS IMAGE
-                ================================================== -->
+<div>
 
-                <div class="sports-img">
+<div class="offer-kicker">
 
-                    <img
-                        src="assets/images/bottom-sports-img.png"
-                        alt="Sports"
-                    >
+A LITTLE EXTRA TO GET STARTED
 
-                </div>
+</div>
 
 
-            </div>
+<h2>
 
+10% Welcome Offer
 
-        </div>
+</h2>
 
-    </main>
 
+<p>
 
-    <!-- =====================================================
-         TELEGRAM TRACKING
-    ====================================================== -->
+New joiners can check the current
+10% welcome offer.
+Eligibility and applicable terms may vary.
 
-    <script>
+</p>
 
-    document.addEventListener(
-        'DOMContentLoaded',
-        function () {
+</div>
 
 
-            /* ================================================
-               GET TELEGRAM LINK
-            ================================================ */
+<a
+class="btn btn-primary"
+href="https://t.me/sprinteruserid"
+target="_blank"
+rel="noopener"
+onclick="fbq('track','Lead')">
 
-            var telegramLink =
-                document.getElementById(
-                    'telegram-logo-link'
-                );
+✈ Check Offer
 
+</a>
 
-            /* ================================================
-               TELEGRAM CLICK EVENT
-            ================================================ */
 
-            if (telegramLink) {
+</div>
 
-                telegramLink.addEventListener(
-                    'click',
-                    function () {
 
-                        /*
-                         * TelegramClick is sent to
-                         * both initialized Pixels.
-                         */
+<div class="offer-note">
 
-                        fbq(
-                            'track',
-                            'TelegramClick'
-                        );
+New joiners only · Terms & eligibility apply
 
-                    }
-                );
+</div>
 
-            }
 
+</div>
 
-            /* ================================================
-               AUTOMATIC TELEGRAM REDIRECT
-            ================================================ */
+</div>
 
-            setTimeout(
-                function () {
+</section>
 
 
-                    /*
-                     * Track visitor before redirect.
-                     */
 
-                    fbq(
-                        'track',
-                        'TelegramRedirect'
-                    );
+<!-- ================= STATS ================= -->
 
+<div class="wrap">
 
-                    /*
-                     * Wait 500ms so the event
-                     * has time to start sending.
-                     */
+<div class="strip">
 
-                    setTimeout(
-                        function () {
 
-                            window.location.href =
-                                'https://t.me/sprinteruserid';
+<div class="stat">
 
-                        },
-                        500
-                    );
+<strong>24/7</strong>
 
+<span>
+Community access
+</span>
 
-                },
-                1000
-            );
+</div>
 
 
-        }
-    );
+<div class="stat">
 
-    </script>
+<strong>LIVE</strong>
+
+<span>
+Latest updates
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>FAST</strong>
+
+<span>
+Announcements
+</span>
+
+</div>
+
+
+<div class="stat">
+
+<strong>ONE</strong>
+
+<span>
+Connected community
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section id="why">
+
+<div class="wrap">
+
+
+<div class="section-head">
+
+<div class="mini">
+
+Why Sprinter Community
+
+</div>
+
+
+<h2>
+
+More to discover.
+More to share.
+
+</h2>
+
+
+<p>
+
+Everything important, collected
+in one simple community space.
+
+</p>
+
+</div>
+
+
+
+<div class="cards">
+
+
+<article class="card">
+
+<div class="icon">
+📢
+</div>
+
+<h3>
+Latest Updates
+</h3>
+
+<p>
+
+Stay informed with fresh announcements,
+news and important community updates.
+
+</p>
+
+</article>
+
+
+
+<article class="card">
+
+<div class="icon">
+💬
+</div>
+
+<h3>
+Stay Connected
+</h3>
+
+<p>
+
+Join the conversation, follow community
+activity and keep in touch with Sprinter.
+
+</p>
+
+</article>
+
+
+
+<article class="card">
+
+<div class="icon">
+⚡
+</div>
+
+<h3>
+Quick Access
+</h3>
+
+<p>
+
+Get useful information and new announcements
+without searching across different places.
+
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= COMMUNITY ================= -->
+
+<section>
+
+<div class="wrap">
+
+
+<div class="community">
+
+
+<div
+style="
+color:#f7d56b;
+font-size:12px;
+font-weight:900;
+letter-spacing:2px;
+">
+
+WELCOME IN
+
+</div>
+
+
+<h2>
+
+A community that keeps
+you in the loop.
+
+</h2>
+
+
+<p>
+
+Join the official Sprinter community
+to receive announcements, updates
+and community information directly
+in one place.
+
+</p>
+
+
+
+<div class="points">
+
+
+<div class="point">
+
+<span class="check">
+✓
+</span>
+
+Regular community updates
+
+</div>
+
+
+<div class="point">
+
+<span class="check">
+✓
+</span>
+
+Important announcements
+
+</div>
+
+
+<div class="point">
+
+<span class="check">
+✓
+</span>
+
+Easy access to information
+
+</div>
+
+
+<div class="point">
+
+<span class="check">
+✓
+</span>
+
+Community support
+
+</div>
+
+
+</div>
+
+
+<a
+class="btn btn-primary"
+href="https://t.me/sprinteruserid"
+target="_blank"
+rel="noopener"
+onclick="fbq('track','Lead')">
+
+✈ Join Sprinter Community
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= STEPS ================= -->
+
+<section>
+
+<div class="wrap">
+
+
+<div class="section-head">
+
+<div class="mini">
+Simple to join
+</div>
+
+
+<h2>
+
+Three steps.
+One community.
+
+</h2>
+
+
+<p>
+
+Getting connected takes only a moment.
+
+</p>
+
+</div>
+
+
+
+<div class="steps">
+
+
+<article class="step">
+
+<span class="num">
+01
+</span>
+
+<h3>
+Tap Join
+</h3>
+
+<p>
+
+Use any of the community buttons
+on this page.
+
+</p>
+
+</article>
+
+
+
+<article class="step">
+
+<span class="num">
+02
+</span>
+
+<h3>
+Connect
+</h3>
+
+<p>
+
+Open the official Sprinter community
+on Telegram.
+
+</p>
+
+</article>
+
+
+
+<article class="step">
+
+<span class="num">
+03
+</span>
+
+<h3>
+Stay Updated
+</h3>
+
+<p>
+
+Follow announcements and stay connected
+with the community.
+
+</p>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="final">
+
+<div class="wrap">
+
+
+<div class="eyebrow">
+
+SPRINTER COMMUNITY
+
+</div>
+
+
+<h2>
+
+Ready to stay connected?
+
+</h2>
+
+
+<p>
+
+Join the community and keep up
+with the latest Sprinter updates.
+
+</p>
+
+
+<a
+class="btn btn-primary"
+href="https://t.me/sprinteruserid"
+target="_blank"
+rel="noopener"
+onclick="fbq('track','Lead')">
+
+✈ Join Telegram Community
+
+</a>
+
+
+</div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="wrap">
+
+© 2026 <b>SPRINTER</b> · Community Page
+
+</div>
+
+</footer>
 
 
 </body>
-
 </html>
