@@ -13,7 +13,8 @@
 
     <!-- =====================================================
          META PIXEL
-         Pixel ID: 1691412755282810
+         Pixel 1: 1691412755282810
+         Pixel 2: 2233774397380123
          ===================================================== -->
 
     <script>
@@ -26,17 +27,39 @@
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
 
+    /* PIXEL 1 */
     fbq('init', '1691412755282810');
+
+    /* PIXEL 2 */
+    fbq('init', '2233774397380123');
+
+    /* PAGE VIEW */
     fbq('track', 'PageView');
     </script>
 
+
+    <!-- =====================================================
+         META PIXEL NOSCRIPT
+         ===================================================== -->
+
     <noscript>
+
         <img
             height="1"
             width="1"
             style="display:none"
             src="https://www.facebook.com/tr?id=1691412755282810&ev=PageView&noscript=1"
+            alt=""
         />
+
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=2233774397380123&ev=PageView&noscript=1"
+            alt=""
+        />
+
     </noscript>
 
     <!-- End Meta Pixel Code -->
@@ -750,7 +773,8 @@
 function trackTelegramClick(event) {
 
     /*
-       Send custom event to Meta Pixel
+       Track Telegram button click
+       on both initialized Meta Pixels.
     */
 
     if (typeof fbq === "function") {
